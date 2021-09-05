@@ -1,0 +1,13 @@
+.footer-content {
+    @include sectionPadding($vertical: 60px);
+    @include flexContainer(flex, space-between, row);
+    @include font(15px, #fff, 400, 22.5px);
+    background-color: #525564;
+    color: #fff;
+    .footer-logo {
+        @include flexContainer(flex, center, row);
+    }
+    a {
+        color: $lightPinkColor;
+    }
+}

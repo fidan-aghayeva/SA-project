@@ -1,0 +1,27 @@
+@mixin sectionPadding($vertical, $horizontal:8%) {
+    padding: $vertical $horizontal;
+}
+
+@mixin transition15 {
+    transition: all .15s ease-in-out;
+}
+
+@mixin flexContainer($flexType, $justifyContent, $flexDir) {
+    display: $flexType;
+    justify-content: $justifyContent;
+    flex-direction: $flexDir;
+    align-items: center;
+}
+
+@mixin font($size, $color, $weight, $lineHeight) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+@mixin fullBgImage {
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

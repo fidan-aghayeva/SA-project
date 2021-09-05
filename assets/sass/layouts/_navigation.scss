@@ -1,0 +1,73 @@
+// header style
+.header {
+    background-color: #fff;
+    padding: 20px 8% 10px 8%;
+    @include flexContainer($flexType: flex, $justifyContent: space-between, $flexDir: row);
+    &__logo {
+        @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+    }
+    &__list {
+        @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+    }
+    &__list-item {
+        padding: 0 15px;
+        a {
+            @include font(14px, #000, 400, 21px);
+            display: inline-flex;
+            margin-bottom: 10px;
+        }
+    }
+    &__search {
+        background-color: #FFF8F8;
+        border-radius: 12px;
+        padding: 14px 20px;
+        margin-bottom: 10px;
+        @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+        form {
+            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+        }
+        &-container {
+            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+            input {
+                border: none;
+                background-color: #FFF8F8;
+                text-indent: 15px;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: #646464;
+                }
+            }
+        }
+    }
+    .lang-menu {
+        position: relative;
+        width: 67px;
+        text-align: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        @include font(14px, #000, 400, 24px);
+        &__list {
+            @include font(14px, #111, 400, 24px);
+            display: none;
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 50px;
+            background-color: #fff;
+            border: 0.5px solid $pinkColor;
+            border-radius: 6px;
+            &-item {
+                text-align: center;
+                &:hover {
+                    background-color: $pinkColor;
+                    color: #fff;
+                }
+            }
+            &.show-lang-menu {
+                display: block !important;
+            }
+        }
+    }
+}
