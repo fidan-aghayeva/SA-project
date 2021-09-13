@@ -1,0 +1,5 @@
+1.submenu düzəltmək
+2.lang menuda kənara basanda bağlanmalıdır
+3.slider oxlardakı problemə bax
+4.buttonlara animasiya əlavə et
+5.fancy-box doca bax

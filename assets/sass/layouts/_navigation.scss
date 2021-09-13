@@ -1,72 +1,156 @@
 // header style
 .header {
-    background-color: #fff;
-    padding: 20px 8% 10px 8%;
-    @include flexContainer($flexType: flex, $justifyContent: space-between, $flexDir: row);
-    &__logo {
-        @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
-    }
-    &__list {
-        @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
-    }
-    &__list-item {
-        padding: 0 15px;
-        a {
-            @include font(14px, #000, 400, 21px);
-            display: inline-flex;
-            margin-bottom: 10px;
-        }
-    }
-    &__search {
-        background-color: #FFF8F8;
-        border-radius: 12px;
-        padding: 14px 20px;
-        margin-bottom: 10px;
-        @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
-        form {
+    position: relative;
+    .desktop-menu {
+        background-color: #fff;
+        padding: 20px 8% 10px 8%;
+        @include flexContainer($flexType: flex, $justifyContent: space-between, $flexDir: row);
+        &__logo {
             @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
         }
-        &-container {
-            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
-            input {
-                border: none;
-                background-color: #FFF8F8;
-                text-indent: 15px;
-                &:focus {
-                    outline: none;
-                }
-                &::placeholder {
-                    color: #646464;
-                }
-            }
-        }
-    }
-    .lang-menu {
-        position: relative;
-        width: 67px;
-        text-align: center;
-        margin-bottom: 10px;
-        cursor: pointer;
-        @include font(14px, #000, 400, 24px);
         &__list {
-            @include font(14px, #111, 400, 24px);
-            display: none;
-            position: absolute;
-            top: -5px;
-            left: 0;
-            width: 50px;
-            background-color: #fff;
-            border: 0.5px solid $pinkColor;
-            border-radius: 6px;
-            &-item {
-                text-align: center;
-                &:hover {
-                    background-color: $pinkColor;
-                    color: #fff;
+            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+        }
+        &__list-item {
+            padding: 0 15px;
+            a {
+                @include font(14px, #000, 400, 21px);
+                display: inline-flex;
+                margin-bottom: 10px;
+            }
+        }
+        &__search {
+            background-color: #FFF8F8;
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin-bottom: 10px;
+            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+            form {
+                @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+            }
+            &-container {
+                @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+                input {
+                    border: none;
+                    background-color: #FFF8F8;
+                    text-indent: 15px;
+                    &:focus {
+                        outline: none;
+                    }
+                    &::placeholder {
+                        color: #646464;
+                    }
                 }
             }
-            &.show-lang-menu {
-                display: block !important;
+        }
+        .lang-menu {
+            position: relative;
+            width: 67px;
+            text-align: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            @include font(14px, #000, 400, 24px);
+            &__list {
+                @include font(14px, #111, 400, 24px);
+                display: none;
+                position: absolute;
+                top: -5px;
+                left: 0;
+                width: 50px;
+                background-color: #fff;
+                border: 0.5px solid $pinkColor;
+                border-radius: 6px;
+                &-item {
+                    text-align: center;
+                    &:hover {
+                        background-color: $pinkColor;
+                        color: #fff;
+                    }
+                }
+                &.show-lang-menu {
+                    display: block !important;
+                }
+            }
+        }
+    }
+    .mobile-menu {
+        &__header {
+            @include flexContainer(flex, space-between, row);
+            background-color: #fff;
+            padding: 15px 25px;
+            >div {
+                @include flexContainer(inline-flex, center, row);
+                align-items: center;
+            }
+        }
+        &__container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            display: none;
+            background-color: $blueColor;
+            &.show-mobile-menu {
+                @include flexContainer(flex, space-between, column);
+                align-items: flex-start;
+            }
+            .close-button {
+                @include flexContainer(flex, end, row);
+                align-items: center;
+                width: 100%;
+                padding: 30px 16px;
+                cursor: pointer;
+            }
+            .lang-menu {
+                &--mobile {
+                    width: 100%;
+                    padding: 16px;
+                    border-top: 0.5px solid #FFFFFF;
+                    border-bottom: 0.5px solid #FFFFFF;
+                }
+                &__list {
+                    &-item {
+                        @include font(15px, #fff, 500, 22px);
+                        display: inline-flex;
+                        &.selected-lang {
+                            @include flexContainer(inline-flex, center, row);
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 6px;
+                            background-color: #064DBF;
+                        }
+                        &:not(:last-of-type) {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+            .social-icons {
+                @include flexContainer(flex, center, row);
+                width: 100%;
+                padding-bottom: 30px;
+                div {
+                    i {
+                        @include flexContainer(inline-flex, center, column);
+                        width: 39px;
+                        height: 39px;
+                        border-radius: 50%;
+                        border: 1.5px solid #c2c2e2;
+                        margin-right: 15px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &__list {
+            padding: 30px 16px;
+            &-item {
+                margin-bottom: 30px;
+                a {
+                    @include font(16px, #fff, normal, 24px);
+                    letter-spacing: 1px;
+                }
             }
         }
     }

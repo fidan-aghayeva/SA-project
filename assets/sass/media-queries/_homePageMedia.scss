@@ -1,0 +1,15 @@
+@media screen and (max-width:992px) {
+    .header {
+        .desktop-menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .header {
+        .mobile-menu {
+            display: none;
+        }
+    }
+}
