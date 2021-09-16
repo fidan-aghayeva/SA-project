@@ -1,0 +1,134 @@
+// blog and news section
+.blog-news {
+    &.home-page-blogs {
+        @include sectionPadding($vertical: 107px);
+        background-size: contain;
+        background-position: 100% 60%;
+        background-repeat: no-repeat;
+        background-image: url('../../../assets/images/bg-images/section-bg.svg');
+    }
+    @include sectionPadding($vertical: 90px);
+    .section-title {
+        @include flexContainer(flex,
+        center,
+        column);
+        text-align: center;
+        padding: 0 30%;
+        h3 {
+            @include font(28px,
+            #000,
+            500,
+            42px);
+        }
+        p {
+            @include font(15px,
+            #3e3e3e,
+            400,
+            22.5px);
+        }
+    }
+    .blog-news__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+        .card--item {
+            @include transition15;
+            background-color: #fff;
+            border: 1px solid #D7D9DA;
+            border-radius: 12px;
+            .card--header {
+                position: relative;
+                .card--image {
+                    img {
+                        width: 100%;
+                        height: 230px;
+                    }
+                }
+                .card--type {
+                    @include flexContainer(inline-flex,
+                    center,
+                    row);
+                    position: absolute;
+                    top: 16px;
+                    left: 16px;
+                    padding: 5px 25px;
+                    background-color: #fff;
+                    border-radius: 16px;
+                }
+            }
+            .card--footer {
+                padding: 30px 15px;
+                .card--title {
+                    @include font(18px,
+                    $blueColor,
+                    500,
+                    27px);
+                    display: flex;
+                    align-items: flex-start;
+                    max-height: 27px;
+                    overflow-y: hidden;
+                }
+                .publish-date {
+                    @include font(14px,
+                    $pinkColor,
+                    400,
+                    21px);
+                }
+                .card--des {
+                    @include font(15px,
+                    #6a6a6a,
+                    500,
+                    22.5px);
+                    display: flex;
+                    align-items: flex-start;
+                    max-height: 67.5px;
+                    overflow-y: hidden;
+                    margin: 16px 0 33px 0;
+                }
+                .go-to-btn {
+                    @include flexContainer(inline-flex,
+                    center,
+                    row);
+                    @include fullBgImage;
+                    @include transition15;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 1px solid #D7D9DA;
+                    img {
+                        content: url('../../../assets/images/icons/gray-arrow-right.png');
+                    }
+                }
+            }
+            &:hover {
+                border: 1px solid transparent;
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
+                .go-to-btn {
+                    background-color: $pinkColor !important;
+                    border: 1px solid transparent;
+                    img {
+                        content: url('../../../assets/images/icons/white-arrow-right.png');
+                    }
+                }
+            }
+        }
+    }
+    .more-btn-box {
+        @include flexContainer(flex,
+        center,
+        row);
+        margin-top: 60px;
+        .more-btn {
+            @include transition15;
+            background-color: $pinkColor;
+            color: #fff;
+            border: 1px solid $pinkColor;
+            &:hover {
+                background-color: #fff;
+                color: $pinkColor;
+            }
+        }
+    }
+}

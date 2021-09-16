@@ -1,516 +1,392 @@
-                .main-section {
-                    @include sectionPadding($vertical: 130px);
-                    @include fullBgImage;
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: row;
-                    background-image: url('../../../assets/images/bg-images/home-page-bg.svg');
-                    &__content {
-                        h1 {
-                            @include font(42px,
-                            $blueColor,
-                            700,
-                            63px)
+    .main-section {
+        @include sectionPadding($vertical: 130px);
+        @include fullBgImage;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background-image: url('../../../assets/images/bg-images/home-page-bg.svg');
+        &__content {
+            h1 {
+                @include font(42px,
+                $blueColor,
+                700,
+                63px)
+            }
+            p {
+                @include font(16px,
+                rgba(0, 50, 108, 0.7),
+                400,
+                24px);
+                padding-top: 15px;
+            }
+        }
+        &__buttons {
+            margin-top: 40px;
+            .btn-blue-bg {
+                border: 1px solid $blueColor;
+                background-color: $blueColor;
+                color: #fff;
+                margin-right: 30px;
+                &:hover {
+                    @include transition15;
+                    background-color: transparent;
+                    color: $blueColor;
+                }
+            }
+            .btn-blue-border {
+                border: 1px solid $blueColor;
+                color: $blueColor;
+                background-color: transparent;
+                &:hover {
+                    @include transition15;
+                    color: #fff;
+                    background-color: $blueColor;
+                }
+            }
+        }
+        &__img {
+            padding: 0 0 0 140px;
+            img {
+                width: 392px;
+                height: 476px;
+            }
+        }
+    }
+    
+    // recommended books section
+    .recommended-books {
+        position: relative;
+        .section-bg-image {
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            z-index: -1;
+            img {
+                width: 500px;
+                height: 500px;
+            }
+        }
+        .books-slider {
+            padding: 20px 8% 130px 8%;
+            &__title {
+                width: 50%;
+                span {
+                    @include flexContainer(inline-flex,
+                    flex-start,
+                    row);
+                    @include font(18px,
+                    #000,
+                    500,
+                    27px);
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+                &--text {
+                    @include font(15px,
+                    #3e3e3e,
+                    400,
+                    22.5px);
+                    padding-left: 35px;
+                }
+            }
+            &__item {
+                display: flex;
+                padding: 30px;
+                >div {
+                    @include flexContainer(flex,
+                    space-between,
+                    row);
+                    background: #FFFFFF;
+                    width: 100%;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+                    margin-top: 40px;
+                    .book-image {
+                        height: 300px;
+                        img {
+                            width: 200px;
+                            height: 100% !important;
+                            object-fit: cover;
+                            box-shadow: 11px -1px 34px -9px rgba(0, 0, 0, 0.47);
                         }
-                        p {
+                    }
+                    .book-description {
+                        padding: 20px 60px 20px 40px;
+                        .book-name {
+                            @include font(18px,
+                            $blueColor,
+                            500,
+                            27px);
+                            position: relative;
+                            display: inline-flex;
+                            padding-left: 40px;
+                            margin-bottom: 10px;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 12px;
+                                left: 0;
+                                width: 24px;
+                                border-top: 2px solid $blueColor;
+                            }
+                        }
+                        .book-des-content {
                             @include font(16px,
-                            rgba(0, 50, 108, 0.7),
+                            #6a6a6a,
                             400,
                             24px);
-                            padding-top: 15px;
+                            margin-bottom: 40px;
                         }
-                    }
-                    &__buttons {
-                        margin-top: 40px;
-                        .btn-blue-bg {
-                            border: 1px solid $blueColor;
-                            background-color: $blueColor;
-                            color: #fff;
-                            margin-right: 30px;
-                            &:hover {
-                                @include transition15;
-                                background-color: transparent;
-                                color: $blueColor;
-                            }
-                        }
-                        .btn-blue-border {
-                            border: 1px solid $blueColor;
-                            color: $blueColor;
-                            background-color: transparent;
-                            &:hover {
-                                @include transition15;
-                                color: #fff;
-                                background-color: $blueColor;
-                            }
-                        }
-                    }
-                    &__img {
-                        padding: 0 0 0 140px;
-                        img {
-                            width: 392px;
-                            height: 476px;
-                        }
-                    }
-                }
-                
-                // recommended books section
-                .recommended-books {
-                    position: relative;
-                    .section-bg-image {
-                        position: absolute;
-                        bottom: -10px;
-                        left: 0;
-                        z-index: -1;
-                        img {
-                            width: 500px;
-                            height: 500px;
-                        }
-                    }
-                    .books-slider {
-                        padding: 20px 8% 130px 8%;
-                        &__title {
-                            width: 50%;
-                            span {
-                                @include flexContainer(inline-flex,
-                                flex-start,
-                                row);
-                                @include font(18px,
-                                #000,
-                                500,
-                                27px);
-                                img {
-                                    margin-right: 15px;
-                                }
-                            }
-                            &--text {
-                                @include font(15px,
-                                #3e3e3e,
-                                400,
-                                22.5px);
-                                padding-left: 35px;
-                            }
-                        }
-                        &__item {
-                            display: flex;
-                            padding: 30px;
-                            >div {
-                                @include flexContainer(flex,
-                                space-between,
-                                row);
-                                background: #FFFFFF;
-                                width: 100%;
-                                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
-                                margin-top: 40px;
-                                .book-image {
-                                    height: 300px;
-                                    img {
-                                        width: 200px;
-                                        height: 100% !important;
-                                        object-fit: cover;
-                                        box-shadow: 11px -1px 34px -9px rgba(0, 0, 0, 0.47);
-                                    }
-                                }
-                                .book-description {
-                                    padding: 20px 60px 20px 40px;
-                                    .book-name {
-                                        @include font(18px,
-                                        $blueColor,
-                                        500,
-                                        27px);
-                                        position: relative;
-                                        display: inline-flex;
-                                        padding-left: 40px;
-                                        margin-bottom: 10px;
-                                        &::before {
-                                            content: "";
-                                            position: absolute;
-                                            top: 12px;
-                                            left: 0;
-                                            width: 24px;
-                                            border-top: 2px solid $blueColor;
-                                        }
-                                    }
-                                    .book-des-content {
-                                        @include font(16px,
-                                        #6a6a6a,
-                                        400,
-                                        24px);
-                                        margin-bottom: 40px;
-                                    }
-                                    .book-author {
-                                        @include font(18px,
-                                        $blueColor,
-                                        400,
-                                        27px);
-                                    }
-                                }
-                            }
-                        }
-                        .owl-dots {
-                            display: none;
-                        }
-                        .owl-theme .owl-nav {
-                            position: absolute;
-                            bottom: 48px;
-                            right: 100px;
-                            margin-top: 0;
-                            .owl-prev {
-                                @include flexContainer(inline-flex,
-                                center,
-                                column);
-                                @include transition15;
-                                width: 40px;
-                                height: 40px;
-                                border-radius: 8px;
-                                border: 1px solid $blueColor;
-                                background-color: #fff;
-                                margin-right: 20px;
-                                span {
-                                    display: none;
-                                }
-                                &:hover {
-                                    background-color: $blueColor;
-                                }
-                            }
-                            .owl-next {
-                                @include flexContainer(inline-flex,
-                                center,
-                                column);
-                                @include transition15;
-                                width: 40px;
-                                height: 40px;
-                                border-radius: 8px;
-                                border: 1px solid $blueColor;
-                                background-color: #fff;
-                                span {
-                                    display: none;
-                                }
-                                &:hover {
-                                    background-color: $blueColor;
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                // author quote section
-                .author-quote {
-                    @include sectionPadding($vertical: 160px);
-                    position: relative;
-                    min-height: 600px;
-                    background-color: $blueColor;
-                    color: #fff;
-                    .quote__content {
-                        .quote--icon {
-                            position: absolute;
-                            top: 120px;
-                            z-index: 1;
-                            left: 8%;
-                        }
-                        .quote--text-container {
-                            position: absolute;
-                            top: 155px;
-                            z-index: 2;
-                            width: 55%;
-                            padding-left: 60px;
-                            .quote--text {
-                                @include font(18px,
-                                #fff,
-                                400,
-                                32px);
-                            }
-                            .author-des-and-social-icons {
-                                @include flexContainer(flex,
-                                space-between,
-                                row);
-                                padding-top: 40px;
-                                .author-des {
-                                    @include flexContainer(flex,
-                                    flex-start,
-                                    column);
-                                    align-items: flex-start;
-                                    .author-name {
-                                        @include font(18px,
-                                        #fff,
-                                        bold,
-                                        28px);
-                                    }
-                                    .author-job {
-                                        @include font(16px,
-                                        #c2c2e2,
-                                        400,
-                                        26px);
-                                    }
-                                }
-                            }
-                        }
-                        .social-icons {
-                            i {
-                                @include flexContainer(inline-flex,
-                                center,
-                                column);
-                                width: 39px;
-                                height: 39px;
-                                border-radius: 50%;
-                                border: 1.5px solid #c2c2e2;
-                                margin-right: 15px;
-                                color: #fff;
-                            }
-                        }
-                        .author-image {
-                            position: absolute;
-                            bottom: 6px;
-                            right: 8%;
-                            width: 350px;
-                            height: 550px;
-                        }
-                    }
-                }
-                
-                // blog and news section
-                .blog-news {
-                    @include sectionPadding($vertical: 107px);
-                    background-size: contain;
-                    background-position: 100% 60%;
-                    background-repeat: no-repeat;
-                    background-image: url('../../../assets/images/bg-images/section-bg.svg');
-                    .section-title {
-                        @include flexContainer(flex,
-                        center,
-                        column);
-                        text-align: center;
-                        padding: 0 30%;
-                        h3 {
-                            @include font(28px,
-                            #000,
-                            500,
-                            42px);
-                        }
-                        p {
-                            @include font(15px,
-                            #3e3e3e,
+                        .book-author {
+                            @include font(18px,
+                            $blueColor,
                             400,
-                            22.5px);
-                        }
-                    }
-                    .blog-news__cards {
-                        width: 100%;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
-                        grid-column-gap: 25px;
-                        .card--item {
-                            @include transition15;
-                            background-color: #fff;
-                            border: 1px solid #D7D9DA;
-                            border-radius: 12px;
-                            margin: 70px 0;
-                            .card--header {
-                                position: relative;
-                                .card--image {
-                                    img {
-                                        width: 100%;
-                                        height: 230px;
-                                    }
-                                }
-                                .card--type {
-                                    @include flexContainer(inline-flex,
-                                    center,
-                                    row);
-                                    position: absolute;
-                                    top: 16px;
-                                    left: 16px;
-                                    padding: 5px 25px;
-                                    background-color: #fff;
-                                    border-radius: 16px;
-                                }
-                            }
-                            .card--footer {
-                                padding: 30px 15px;
-                                .card--title {
-                                    @include font(18px,
-                                    $blueColor,
-                                    500,
-                                    27px);
-                                    display: flex;
-                                    align-items: flex-start;
-                                    max-height: 27px;
-                                    overflow-y: hidden;
-                                }
-                                .publish-date {
-                                    @include font(14px,
-                                    $pinkColor,
-                                    400,
-                                    21px);
-                                }
-                                .card--des {
-                                    @include font(15px,
-                                    #6a6a6a,
-                                    500,
-                                    22.5px);
-                                    display: flex;
-                                    align-items: flex-start;
-                                    max-height: 67.5px;
-                                    overflow-y: hidden;
-                                    margin: 16px 0 33px 0;
-                                }
-                                .go-to-btn {
-                                    @include flexContainer(inline-flex,
-                                    center,
-                                    row);
-                                    @include fullBgImage;
-                                    @include transition15;
-                                    width: 48px;
-                                    height: 48px;
-                                    border-radius: 50%;
-                                    background-color: transparent;
-                                    border: 1px solid #D7D9DA;
-                                    img {
-                                        content: url('../../../assets/images/icons/gray-arrow-right.png');
-                                    }
-                                }
-                            }
-                            &:hover {
-                                border: 1px solid transparent;
-                                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
-                                .go-to-btn {
-                                    background-color: $pinkColor !important;
-                                    border: 1px solid transparent;
-                                    img {
-                                        content: url('../../../assets/images/icons/white-arrow-right.png');
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .more-btn-box {
-                        @include flexContainer(flex,
-                        center,
-                        row);
-                        .more-btn {
-                            @include transition15;
-                            background-color: $pinkColor;
-                            color: #fff;
-                            border: 1px solid $pinkColor;
-                            &:hover {
-                                background-color: #fff;
-                                color: $pinkColor;
-                            }
-                        }
-                    }
-                    .videos-slider {
-                        position: relative;
-                        padding: 140px 0 50px 0;
-                        &__title {
-                            width: 40%;
-                            padding-bottom: 10px;
-                            span {
-                                @include flexContainer(inline-flex,
-                                flex-start,
-                                row);
-                                @include font(18px,
-                                #000,
-                                500,
-                                27px);
-                                img {
-                                    margin-right: 15px;
-                                }
-                            }
-                            &--text {
-                                @include font(15px,
-                                #3e3e3e,
-                                400,
-                                22.5px);
-                                padding-left: 35px;
-                            }
-                        }
-                        &__item {
-                            @include transition15;
-                            padding: 30px 15px;
-                            .video--card {
-                                background-color: #fff;
-                                .fancy-box {
-                                    div {
-                                        position: relative;
-                                        .play-icon {
-                                            @include flexContainer(inline-flex,
-                                            center,
-                                            row);
-                                            position: absolute;
-                                            top: 30%;
-                                            left: 37%;
-                                            z-index: 2;
-                                            transform: translate(50%, 50%);
-                                            width: 56px;
-                                            height: 56px;
-                                            border-radius: 50%;
-                                            background-color: #fff;
-                                            color: $blueColor;
-                                            font-size: 25px;
-                                            padding-left: 5px;
-                                        }
-                                        img {
-                                            width: 100%;
-                                            height: 260px;
-                                        }
-                                    }
-                                }
-                                &-body {
-                                    padding: 20px 80px 20px 30px;
-                                }
-                                &-title {
-                                    @include font(18px,
-                                    $blueColor,
-                                    500,
-                                    27px);
-                                }
-                                &:hover {
-                                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
-                                }
-                            }
-                        }
-                        .owl-dots {
-                            display: none;
-                        }
-                        .owl-theme .owl-nav {
-                            position: absolute;
-                            top: -75px;
-                            right: 10px;
-                            margin-top: 0;
-                            .owl-prev {
-                                @include flexContainer(inline-flex,
-                                center,
-                                column);
-                                @include transition15;
-                                width: 40px;
-                                height: 40px;
-                                border-radius: 8px;
-                                border: 1px solid $blueColor;
-                                background-color: #fff;
-                                margin-right: 20px;
-                                span {
-                                    display: none;
-                                }
-                                &:hover {
-                                    background-color: $blueColor;
-                                }
-                            }
-                            .owl-next {
-                                @include flexContainer(inline-flex,
-                                center,
-                                column);
-                                @include transition15;
-                                width: 40px;
-                                height: 40px;
-                                border-radius: 8px;
-                                border: 1px solid $blueColor;
-                                background-color: #fff;
-                                span {
-                                    display: none;
-                                }
-                                &:hover {
-                                    background-color: $blueColor;
-                                }
-                            }
+                            27px);
                         }
                     }
                 }
+            }
+            .owl-dots {
+                display: none;
+            }
+            .owl-theme .owl-nav {
+                position: absolute;
+                bottom: 48px;
+                right: 100px;
+                margin-top: 0;
+                .owl-prev {
+                    @include flexContainer(inline-flex,
+                    center,
+                    column);
+                    @include transition15;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid $blueColor;
+                    background-color: #fff;
+                    margin-right: 20px;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: $blueColor;
+                    }
+                }
+                .owl-next {
+                    @include flexContainer(inline-flex,
+                    center,
+                    column);
+                    @include transition15;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid $blueColor;
+                    background-color: #fff;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: $blueColor;
+                    }
+                }
+            }
+        }
+    }
+    
+    // author quote section
+    .author-quote {
+        @include sectionPadding($vertical: 160px);
+        position: relative;
+        min-height: 600px;
+        background-color: $blueColor;
+        color: #fff;
+        .quote__content {
+            .quote--icon {
+                position: absolute;
+                top: 120px;
+                z-index: 1;
+                left: 8%;
+            }
+            .quote--text-container {
+                position: absolute;
+                top: 155px;
+                z-index: 2;
+                width: 55%;
+                padding-left: 60px;
+                .quote--text {
+                    @include font(18px,
+                    #fff,
+                    400,
+                    32px);
+                }
+                .author-des-and-social-icons {
+                    @include flexContainer(flex,
+                    space-between,
+                    row);
+                    padding-top: 40px;
+                    .author-des {
+                        @include flexContainer(flex,
+                        flex-start,
+                        column);
+                        align-items: flex-start;
+                        .author-name {
+                            @include font(18px,
+                            #fff,
+                            bold,
+                            28px);
+                        }
+                        .author-job {
+                            @include font(16px,
+                            #c2c2e2,
+                            400,
+                            26px);
+                        }
+                    }
+                }
+            }
+            .social-icons {
+                i {
+                    @include flexContainer(inline-flex,
+                    center,
+                    column);
+                    @include transition15;
+                    width: 39px;
+                    height: 39px;
+                    border-radius: 50%;
+                    border: 1.5px solid #c2c2e2;
+                    margin-right: 15px;
+                    color: #fff;
+                    &:hover {
+                        background-color: #fff;
+                        border: 1px solid #fff;
+                        color: $blueColor;
+                    }
+                }
+            }
+            .author-image {
+                position: absolute;
+                bottom: 6px;
+                right: 8%;
+                width: 350px;
+                height: 550px;
+            }
+        }
+    }
+    
+    // video-slider section
+    .videos-slider {
+        position: relative;
+        padding: 140px 0 50px 0;
+        &__title {
+            width: 40%;
+            padding-bottom: 10px;
+            span {
+                @include flexContainer(inline-flex,
+                flex-start,
+                row);
+                @include font(18px,
+                #000,
+                500,
+                27px);
+                img {
+                    margin-right: 15px;
+                }
+            }
+            &--text {
+                @include font(15px,
+                #3e3e3e,
+                400,
+                22.5px);
+                padding-left: 35px;
+            }
+        }
+        &__item {
+            @include transition15;
+            padding: 30px 15px;
+            .video--card {
+                background-color: #fff;
+                .fancy-box {
+                    div {
+                        position: relative;
+                        .play-icon {
+                            @include flexContainer(inline-flex,
+                            center,
+                            row);
+                            position: absolute;
+                            top: 30%;
+                            left: 37%;
+                            z-index: 2;
+                            transform: translate(50%, 50%);
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            color: $blueColor;
+                            font-size: 25px;
+                            padding-left: 5px;
+                        }
+                        img {
+                            width: 100%;
+                            height: 260px;
+                        }
+                    }
+                }
+                &-body {
+                    padding: 20px 80px 20px 30px;
+                }
+                &-title {
+                    @include font(18px,
+                    $blueColor,
+                    500,
+                    27px);
+                }
+                &:hover {
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
+                }
+            }
+        }
+        .owl-dots {
+            display: none;
+        }
+        .owl-theme .owl-nav {
+            position: absolute;
+            top: -75px;
+            right: 10px;
+            margin-top: 0;
+            .owl-prev {
+                @include flexContainer(inline-flex,
+                center,
+                column);
+                @include transition15;
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                border: 1px solid $blueColor;
+                background-color: #fff;
+                margin-right: 20px;
+                span {
+                    display: none;
+                }
+                &:hover {
+                    background-color: $blueColor;
+                }
+            }
+            .owl-next {
+                @include flexContainer(inline-flex,
+                center,
+                column);
+                @include transition15;
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                border: 1px solid $blueColor;
+                background-color: #fff;
+                span {
+                    display: none;
+                }
+                &:hover {
+                    background-color: $blueColor;
+                }
+            }
+        }
+    }

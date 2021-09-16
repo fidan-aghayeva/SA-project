@@ -4,9 +4,217 @@
             display: none;
         }
     }
+    .main-section {
+        @include sectionPadding($vertical: 30px, $horizontal: 16px);
+        justify-content: center;
+        flex-direction: column;
+        background-image: url('../../../assets/images/bg-images/home-page-bg-mobile.png');
+        &__content {
+            order: 2;
+            h1 {
+                @include font(18px,
+                $blueColor,
+                700,
+                27px)
+            }
+            p {
+                @include font(16px,
+                rgba(0, 50, 108, 0.7),
+                400,
+                24px);
+                padding-top: 15px;
+            }
+        }
+        &__buttons {
+            margin-top: 15px;
+            .btn-blue-bg {
+                padding: 9px 30px;
+                margin-right: 15px;
+            }
+            .btn-blue-border {
+                padding: 9px 30px;
+            }
+        }
+        &__img {
+            padding: 0;
+            order: 1;
+            img {
+                content: url('/assets/images/client-photos/mobile-image-1.png');
+                width: 100%;
+                height: 296px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    // recommend books section
+    .recommended-books {
+        .section-bg-image {
+            display: none;
+        }
+        .books-slider {
+            padding: 60px 15px;
+            &__title {
+                width: 100%;
+                padding-bottom: 90px;
+            }
+            &__item {
+                padding: 20px;
+                >div {
+                    @include flexContainer(flex,
+                    center,
+                    column);
+                    background: #FFFFFF;
+                    margin-top: 40px;
+                    padding-top: 30px;
+                    .book-description {
+                        padding: 30px 10px;
+                        text-align: center;
+                        .book-name {
+                            padding-left: 0;
+                            margin-bottom: 30px;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 40px;
+                                left: 35%;
+                            }
+                        }
+                        .book-des-content {
+                            position: relative;
+                            max-height: 96px;
+                            overflow-y: hidden;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+            .owl-dots {
+                display: block;
+                .owl-dot span {
+                    background-color: #A9C6E8;
+                }
+                .owl-dot.active span,
+                .owl-theme .owl-dots .owl-dot:hover span {
+                    background-color: $blueColor;
+                }
+            }
+            .owl-theme .owl-nav {
+                position: absolute;
+                top: -30px;
+                right: 10px;
+            }
+        }
+    }
+    // author quote section
+    .author-quote {
+        @include sectionPadding($vertical: 40px, $horizontal: 16px);
+        min-height: 450px;
+        .quote__content {
+            .quote--icon {
+                position: absolute;
+                top: 40px;
+                left: 16px;
+                opacity: 0.3;
+            }
+            .quote--text-container {
+                position: relative;
+                top: 28px;
+                width: 95%;
+                padding-left: 0px;
+                .quote--text {
+                    @include font(15px,
+                    #fff,
+                    400,
+                    27px);
+                }
+                .author-des-and-social-icons {
+                    @include flexContainer(flex,
+                    start,
+                    column);
+                    align-items: flex-start;
+                    width: 70%;
+                    padding-top: 40px;
+                }
+            }
+            .social-icons {
+                margin: 30px 0;
+            }
+            .author-image {
+                position: absolute;
+                bottom: 0px;
+                right: 16px;
+                width: 136px;
+                height: 216px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .blog-news {
+        @include sectionPadding($vertical: 60px, $horizontal: 16px);
+        background-size: contain;
+        background-image: none;
+        .section-title {
+            padding: 0 16px;
+            h3 {
+                @include font(16px,
+                #000,
+                500,
+                24px);
+            }
+            p {
+                @include font(15px,
+                #3e3e3e,
+                400,
+                22.5px);
+                margin-bottom: 60px;
+            }
+        }
+        .blog-news__cards {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            .card--item {
+                margin: 0 0 24px 0;
+                .card--footer {
+                    .card--title {
+                        @include font(16px,
+                        $blueColor,
+                        500,
+                        24px);
+                        max-height: 24px;
+                    }
+                    .go-to-btn {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .more-btn-box {
+            margin-top: 36px;
+        }
+        .videos-slider {
+            &__title {
+                width: 100%;
+                padding-bottom: 90px;
+            }
+            .owl-dots {
+                display: block;
+                .owl-dot span {
+                    background-color: #A9C6E8;
+                }
+                .owl-dot.active span {
+                    background-color: $blueColor;
+                }
+            }
+            .owl-theme .owl-nav {
+                top: -45px;
+            }
+        }
+    }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:993px) {
     .header {
         .mobile-menu {
             display: none;

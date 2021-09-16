@@ -31,3 +31,41 @@ p {
     line-height: 22px;
     border-radius: 100px;
 }
+
+.page-header {
+    @include flexContainer(flex,
+    center,
+    column);
+    @include sectionPadding($vertical: 76px);
+    align-items: center;
+    height: 240px;
+    background-color: $blueColor;
+    &__content {
+        @include flexContainer(flex,
+        center,
+        column);
+        h1 {
+            @include font(32px,
+            #fff,
+            normal,
+            48px);
+            margin-bottom: 16px;
+        }
+    }
+    &__links {
+        a {
+            position: relative;
+            @include font(16px,
+            #D2DBE5,
+            normal,
+            24px);
+            padding-right: 15px;
+            &:not(:last-of-type)::after {
+                content: ">";
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
