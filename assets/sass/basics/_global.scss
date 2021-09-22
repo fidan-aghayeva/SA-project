@@ -69,3 +69,20 @@ p {
         }
     }
 }
+
+.more-btn-box {
+    @include flexContainer(flex,
+    center,
+    row);
+    margin-top: 60px;
+    .more-btn {
+        @include transition15;
+        background-color: $pinkColor;
+        border: 1px solid $pinkColor;
+        color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: $pinkColor;
+        }
+    }
+}

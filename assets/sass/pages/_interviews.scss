@@ -1,0 +1,47 @@
+// interviews page
+.interviews-page {
+    padding: 90px 8% 120px 8%;
+    .interview-items__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+        .interview-item {
+            @include transition15;
+            border: 1px solid #d7d9da;
+            border-radius: 12px;
+            .interview--card {
+                @include flexContainer(flex, space-between, row);
+                &-image {
+                    width: 184px;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        object-fit: cover;
+                    }
+                }
+                &-body {
+                    padding: 20px 25px;
+                }
+                &-title {
+                    @include font(18px, $blueColor, 500, 27px);
+                }
+                &-date {
+                    @include font(14px, $pinkColor, 500, 21px);
+                    display: inline-flex;
+                    margin-bottom: 10px;
+                }
+                &-description {
+                    @include font(15px, #6a6a6a, normal, 22px);
+                    max-height: 66px;
+                    overflow-y: hidden;
+                }
+            }
+            &:hover {
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
+            }
+        }
+    }
+}

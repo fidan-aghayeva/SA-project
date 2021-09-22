@@ -1,0 +1,58 @@
+.certficates-page {
+    padding: 90px 8% 120px 8%;
+    .certficate-items__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+        .certficate__item {
+            border-radius: 12px;
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            &--image-box {
+                position: relative;
+                background-color: #d5d5d5;
+                padding: 56px 70px;
+                .certficate-image {
+                    background-color: #fff;
+                    border-radius: 12px;
+                    img {
+                        width: 100%;
+                        height: 174px;
+                        border-radius: 12px;
+                        margin: 0 auto;
+                    }
+                }
+                .view-box {
+                    @include flexContainer(none, center, row);
+                    @include transition15;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.4);
+                    div {
+                        @include flexContainer(flex, center, row);
+                        align-items: center;
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        cursor: pointer;
+                    }
+                }
+                &:hover {
+                    .view-box {
+                        display: flex;
+                    }
+                }
+            }
+            &--title {
+                @include font(16px, #000, 500, 23px);
+                text-align: center;
+                padding: 20px 130px;
+            }
+        }
+    }
+}

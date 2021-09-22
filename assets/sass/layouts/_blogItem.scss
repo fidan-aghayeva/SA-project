@@ -25,6 +25,7 @@
             #3e3e3e,
             400,
             22.5px);
+            margin-bottom: 70px;
         }
     }
     .blog-news__cards {
@@ -112,22 +113,6 @@
                         content: url('../../../assets/images/icons/white-arrow-right.png');
                     }
                 }
-            }
-        }
-    }
-    .more-btn-box {
-        @include flexContainer(flex,
-        center,
-        row);
-        margin-top: 60px;
-        .more-btn {
-            @include transition15;
-            background-color: $pinkColor;
-            color: #fff;
-            border: 1px solid $pinkColor;
-            &:hover {
-                background-color: #fff;
-                color: $pinkColor;
             }
         }
     }

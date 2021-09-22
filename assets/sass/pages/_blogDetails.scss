@@ -1,0 +1,81 @@
+// blog details page
+.blog-details {
+    padding: 60px 8% 120px 8%;
+    .blog-detail--slider {
+        .detail-item {
+            width: 100%;
+            height: 390px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .owl-dots {
+            display: none;
+        }
+        .owl-nav {
+            @include flexContainer(flex, space-between, row);
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 38%;
+            button {
+                @include flexContainer(inline-flex, center, row);
+                align-items: center;
+                width: 35px;
+                height: 48px;
+                background-color: #fff !important;
+                border-radius: 6px;
+                span {
+                    font-size: 40px;
+                    font-weight: 400;
+                }
+                &:hover {
+                    color: #000;
+                }
+            }
+            .owl-prev {
+                margin-left: 30px;
+            }
+            .owl-next {
+                margin-right: 30px;
+            }
+        }
+    }
+    .publish-date-and-share {
+        padding: 30px 0;
+        a {
+            .publish-date {
+                @include font(14px, #989B9C, 400, 21px);
+            }
+            .share {
+                @include flexContainer(inline-flex, space-between, row);
+                padding: 9px 15px;
+                margin-left: 50px;
+                border-radius: 50px;
+                color: #fff;
+                background-color: #1F69AF;
+                img {
+                    margin-right: 9px;
+                }
+            }
+        }
+    }
+    .blog-detail {
+        &__container {
+            padding: 0 200px;
+            &--content {
+                @include font(16px, #555, 500, 26px);
+            }
+        }
+    }
+    .similar-blogs {
+        &-title {
+            @include font(28px, #000, 500, 42px);
+            padding: 160px 0 40px 0;
+        }
+        .blog-news {
+            padding: 0;
+        }
+    }
+}

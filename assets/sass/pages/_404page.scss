@@ -1,0 +1,30 @@
+.error-page {
+    padding-bottom: 234px;
+    div {
+        @include flexContainer(flex, center, column);
+        @include fullBgImage;
+        text-align: center;
+        background-image: url('../../../assets/images/bg-images/404page-bg.png');
+        padding-bottom: 150px;
+        h1 {
+            @include font(256px,
+            $blueColor,
+            400,
+            384px);
+        }
+        h5 {
+            @include font(40px,
+            #000,
+            400,
+            48.41px);
+            margin-bottom: 20px;
+        }
+        p {
+            @include font(16px,
+            #000,
+            400,
+            26px);
+            width: 40%;
+        }
+    }
+}

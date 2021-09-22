@@ -1,0 +1,10 @@
+// videos page
+.videos-page {
+    padding: 90px 8% 120px 8%;
+    .video-items__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+    }
+}

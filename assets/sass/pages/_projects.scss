@@ -1,0 +1,8 @@
+.projects-page {
+    padding: 90px 8% 120px 8%;
+    .project-items__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+    }
+}

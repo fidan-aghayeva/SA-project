@@ -10,13 +10,16 @@
  * - Author          : hp
  * - Modification    : 
  **/
-$(document).ready(function() {
-    $('.owl-carousel-books').owlCarousel();
-});
 
-$(document).ready(function() {
-    $('.owl-carousel-videos').owlCarousel();
-});
+function callCarousel(className) {
+    $(document).ready(function() {
+        $(className).owlCarousel();
+    });
+}
+
+callCarousel('.owl-carousel-books');
+callCarousel('.owl-carousel-videos');
+callCarousel('.owl-carousel-blog-details');
 
 $('.owl-carousel-books').owlCarousel({
     loop: true,
@@ -52,9 +55,47 @@ $('.owl-carousel-videos').owlCarousel({
     },
 });
 
-const owlPrevArrow = document.querySelectorAll('.owl-nav .owl-prev');
+$('.owl-carousel-blog-details').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        1000: {
+            items: 1,
+        },
+    },
+});
 
-const owlNextArrow = document.querySelectorAll('.owl-nav .owl-next');
+$('.owl-carousel-interview-details').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        1000: {
+            items: 1,
+        },
+    },
+});
+
+const owlPrevArrow = document.querySelectorAll(
+    '.custom-arrows .owl-nav .owl-prev'
+);
+
+const owlNextArrow = document.querySelectorAll(
+    '.custom-arrows .owl-nav .owl-next'
+);
 
 owlPrevArrow.forEach(item => {
     item.innerHTML = `<img src="../../assets/images/icons/blue-prev-arrow.png" alt="">`;
