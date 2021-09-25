@@ -1,0 +1,37 @@
+// blog and news section
+.blog-news {
+    &.home-page-blogs {
+        @include sectionPadding($vertical: 107px);
+        background-size: contain;
+        background-position: 100% 60%;
+        background-repeat: no-repeat;
+        background-image: url('../../../assets/images/bg-images/section-bg.svg');
+    }
+    @include sectionPadding($vertical: 90px);
+    .section-title {
+        @include flexContainer(flex,
+        center,
+        column);
+        text-align: center;
+        padding: 0 30%;
+        h3 {
+            @include font(28px,
+            #000,
+            500,
+            42px);
+        }
+        p {
+            @include font(15px,
+            #3e3e3e,
+            400,
+            22.5px);
+            margin-bottom: 70px;
+        }
+    }
+    .blog-news__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+    }
+}

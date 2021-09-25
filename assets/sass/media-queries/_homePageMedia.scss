@@ -177,7 +177,7 @@
             grid-column-gap: 0;
             .card--item {
                 margin: 0 0 24px 0;
-                .card--footer {
+                .card--body {
                     .card--title {
                         @include font(16px,
                         $blueColor,

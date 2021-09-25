@@ -21,6 +21,19 @@ p {
     margin-bottom: 0;
 }
 
+input,
+textarea {
+    &::placeholder {
+        @include font(14px,
+        #646464,
+        400,
+        21px);
+    }
+    &:focus {
+        outline: none !important;
+    }
+}
+
 .btn {
     display: inline-flex;
     justify-content: center;

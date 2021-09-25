@@ -1,0 +1,162 @@
+.search-result {
+    padding: 60px 8% 120px 8%;
+    &__container {
+        &--title {
+            @include font(24px, #000, 400, 36px);
+            margin-bottom: 35px;
+        }
+        .search-box {
+            margin-bottom: 30px;
+            form {
+                display: flex;
+                align-items: center;
+                input {
+                    width: 496px;
+                    height: 56px;
+                    border-radius: 28px;
+                    background-color: #FFF8F8;
+                    border: 1px solid #FFBEC2;
+                    text-indent: 16px;
+                    margin-right: 16px;
+                }
+                .search-icon {
+                    @include flexContainer(inline-flex, center, row);
+                    align-items: center;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    background-color: $pinkColor;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .search-keyword--box {
+            @include font(18px, #000, 500, 27px);
+            padding-bottom: 60px;
+            .search-keyword {
+                color: $pinkColor;
+            }
+        }
+    }
+    .finded-results {
+        &__container {
+            >div {
+                padding-bottom: 60px;
+            }
+            .finded--blogs {
+                .card--item {
+                    @include flexContainer(flex, space-between, row);
+                    .card--header {
+                        height: 230px;
+                        .card--image {
+                            img {
+                                width: 288px;
+                                height: 230px;
+                                object-fit: cover;
+                                border-radius: 12px;
+                            }
+                        }
+                    }
+                    .card--body {
+                        @include flexContainer(flex, space-between, row);
+                        align-items: center;
+                        padding: 30px 24px;
+                        .go-to-btn {
+                            margin-left: 130px;
+                        }
+                    }
+                }
+            }
+            .finded--videos {
+                .video__item {
+                    border: 1px solid #D7D9DA;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    .video--card {
+                        @include flexContainer(flex, start, row);
+                        align-items: center;
+                        min-height: 230px;
+                        .fancy-box {
+                            height: 230px;
+                            img {
+                                width: 288px;
+                                height: 230px;
+                                border-radius: 12px 0 0 12px;
+                            }
+                            .play-icon {
+                                left: 32%;
+                                top: 25%;
+                            }
+                        }
+                        &-body {
+                            @include flexContainer(flex, space-between, row);
+                            align-items: center;
+                            width: 100%;
+                            padding: 0 30px 0 24px;
+                            .go-to-btn {
+                                @include flexContainer(inline-flex, center, row);
+                                @include fullBgImage;
+                                @include transition15;
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 50%;
+                                background-color: transparent;
+                                border: 1px solid #D7D9DA;
+                                img {
+                                    content: url('../../../assets/images/icons/gray-arrow-right.png');
+                                }
+                                &:hover {
+                                    background-color: $pinkColor;
+                                    color: #fff;
+                                    border: 1px solid $pinkColor;
+                                    img {
+                                        content: url('../../../assets/images/icons/white-arrow-right.png');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .finded--interviews,
+            .finded--projects {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 25px;
+            }
+        }
+    }
+    &__pagination {
+        text-align: center;
+        a {
+            @include font(16px,
+            #353535,
+            400,
+            19.2px);
+            i {
+                font-size: 25px;
+                font-weight: 500;
+            }
+            &:not(:last-of-type) {
+                @include flexContainer(inline-flex,
+                center,
+                row);
+                @include transition15;
+                align-items: center;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 0.5px solid #B3B3B3;
+                background-color: #fff;
+                margin-right: 16px;
+                &:hover {
+                    background-color: $pinkColor;
+                    border: 0.5px solid $pinkColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

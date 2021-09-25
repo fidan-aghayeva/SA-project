@@ -1,0 +1,54 @@
+.project-details-header {
+    >div {
+        width: 55%;
+    }
+}
+
+.project-details {
+    .blue-bg {
+        width: 100%;
+        height: 150px;
+        background-color: $blueColor;
+    }
+    &__container {
+        padding: 0 8% 120px 8%;
+        background-color: #fff;
+    }
+    &--content {
+        transform: translate(0, -150px);
+        padding: 0 100px;
+        background-color: #fff;
+        p {
+            @include font(16px, #555555, 400, 26px);
+            padding: 60px 104px 0 104px;
+            &:not(:last-of-type) {
+                padding-bottom: 60px;
+            }
+        }
+        .project-details-img-1 {
+            max-height: 380px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .project-details-img-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 24px;
+            max-height: 380px;
+        }
+    }
+    .other-projects {
+        &__title {
+            @include font(28px, #000, 500, 42px);
+            margin-bottom: 40px;
+        }
+        .other-project-items__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+        }
+    }
+}

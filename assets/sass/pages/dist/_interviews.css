@@ -1,0 +1,9 @@
+.interviews-page {
+  padding: 90px 8% 120px 8%;
+}
+.interviews-page .interview-items__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
