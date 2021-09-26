@@ -17,7 +17,21 @@ const langMenuListItems = document.querySelectorAll(
     '.lang-menu__list .lang-menu__list-item'
 );
 
-langMenu.addEventListener('click', function() {
+const desktopDropdownContainer = document.querySelector(
+    '.desktop-dropdown-container'
+);
+const mobileDropdownContainer = document.querySelector(
+    '.mobile-dropdown-container'
+);
+const mobileArrowIcon = document.querySelector('.mobile-dropdown-container i');
+const desktopArrowIcon = document.querySelector(
+    '.desktop-dropdown-container i'
+);
+const desktopDropdown = document.querySelector('.desktop-dropdown');
+const mobileDropdown = document.querySelector('.mobile-dropdown');
+
+langMenu.addEventListener('click', function(e) {
+    e.stopPropagation();
     langMenuList.classList.add('show-lang-menu');
 });
 
@@ -47,12 +61,31 @@ menuCloseButton.addEventListener('click', function() {
     mobileMenuContainer.classList.remove('show-mobile-menu');
 });
 
-// dont work
+// about me menu
 
-// document.getElementsByTagName('html').addEventListener('click', function() {
-//     console.log('yes');
-//     if (langMenu.classList.contain('show-lang-menu')) {
-//         console.log('yes');
-//         langMenuList.classList.remove('show-lang-menu');
-//     }
-// });
+function dropdownMenu(item, e, arrowIcon) {
+    e.stopPropagation();
+    if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        arrowIcon.className = 'fa fa-angle-down';
+    } else {
+        item.classList.add('active');
+        arrowIcon.className = 'fa fa-angle-up';
+    }
+}
+desktopDropdownContainer.addEventListener('click', e =>
+    dropdownMenu(desktopDropdown, e, desktopArrowIcon)
+);
+
+mobileDropdownContainer.addEventListener('click', e =>
+    dropdownMenu(mobileDropdown, e, mobileArrowIcon)
+);
+
+document.body.addEventListener('click', function() {
+    if (langMenuList.classList.contains('show-lang-menu')) {
+        langMenuList.classList.remove('show-lang-menu');
+    }
+    if (desktopDropdown.classList.contains('active')) {
+        desktopDropdown.classList.remove('active');
+    }
+});

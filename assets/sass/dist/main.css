@@ -334,10 +334,13 @@ textarea:focus {
 }
 .card--item .card--header {
   position: relative;
+  height: 230px;
 }
 .card--item .card--header .card--image img {
   width: 100%;
   height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 .card--item .card--header .card--type {
   display: inline-flex;
@@ -351,10 +354,10 @@ textarea:focus {
   background-color: #fff;
   border-radius: 16px;
 }
-.card--item .card--footer {
+.card--item .card--body {
   padding: 30px 15px;
 }
-.card--item .card--footer .card--title {
+.card--item .card--body .card--title {
   font-size: 18px;
   color: #4D7FBA;
   font-weight: 500;
@@ -364,13 +367,13 @@ textarea:focus {
   max-height: 27px;
   overflow-y: hidden;
 }
-.card--item .card--footer .publish-date {
+.card--item .card--body .publish-date {
   font-size: 14px;
   color: #FF515B;
   font-weight: 400;
   line-height: 21px;
 }
-.card--item .card--footer .card--des {
+.card--item .card--body .card--des {
   font-size: 15px;
   color: #6a6a6a;
   font-weight: 500;
@@ -381,7 +384,7 @@ textarea:focus {
   overflow-y: hidden;
   margin: 16px 0 33px 0;
 }
-.card--item .card--footer .go-to-btn {
+.card--item .card--body .go-to-btn {
   display: inline-flex;
   justify-content: center;
   flex-direction: row;
@@ -396,7 +399,7 @@ textarea:focus {
   background-color: transparent;
   border: 1px solid #D7D9DA;
 }
-.card--item .card--footer .go-to-btn img {
+.card--item .card--body .go-to-btn img {
   content: url("../../../assets/images/icons/gray-arrow-right.png");
 }
 .card--item:hover {
@@ -472,7 +475,7 @@ textarea:focus {
   width: 100%;
 }
 .books__item > div .book-image {
-  height: 300px;
+  height: 100% !important;
 }
 .books__item > div .book-image img {
   width: 200px;
@@ -589,6 +592,7 @@ textarea:focus {
   transition: all 0.15s ease-in-out;
   border: 1px solid #d7d9da;
   border-radius: 12px;
+  cursor: pointer;
 }
 .interview-item .interview--card {
   display: flex;
@@ -598,11 +602,11 @@ textarea:focus {
 }
 .interview-item .interview--card-image {
   width: 184px;
-  height: 100%;
+  height: 184px;
 }
 .interview-item .interview--card-image img {
-  width: 100%;
-  height: 100%;
+  width: 184px;
+  height: 184px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -1548,13 +1552,8 @@ textarea:focus {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  transition: all 0.15s ease-in-out;
-  background-color: #fff;
-  border: 1px solid #D7D9DA;
-  border-radius: 12px;
 }
 .search-result .finded-results__container .finded--blogs .card--item .card--header {
-  position: relative;
   height: 230px;
 }
 .search-result .finded-results__container .finded--blogs .card--item .card--header .card--image img {
@@ -1562,18 +1561,6 @@ textarea:focus {
   height: 230px;
   object-fit: cover;
   border-radius: 12px;
-}
-.search-result .finded-results__container .finded--blogs .card--item .card--header .card--type {
-  display: inline-flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 5px 25px;
-  background-color: #fff;
-  border-radius: 16px;
 }
 .search-result .finded-results__container .finded--blogs .card--item .card--body {
   display: flex;
@@ -1583,34 +1570,44 @@ textarea:focus {
   align-items: center;
   padding: 30px 24px;
 }
-.search-result .finded-results__container .finded--blogs .card--item .card--body .card--title {
-  font-size: 18px;
-  color: #4D7FBA;
-  font-weight: 500;
-  line-height: 27px;
-  display: flex;
-  align-items: flex-start;
-  max-height: 27px;
-  overflow-y: hidden;
-}
-.search-result .finded-results__container .finded--blogs .card--item .card--body .publish-date {
-  font-size: 14px;
-  color: #FF515B;
-  font-weight: 400;
-  line-height: 21px;
-}
-.search-result .finded-results__container .finded--blogs .card--item .card--body .card--des {
-  font-size: 15px;
-  color: #6a6a6a;
-  font-weight: 500;
-  line-height: 22.5px;
-  display: flex;
-  align-items: flex-start;
-  max-height: 67.5px;
-  overflow-y: hidden;
-  margin: 16px 0 33px 0;
-}
 .search-result .finded-results__container .finded--blogs .card--item .card--body .go-to-btn {
+  margin-left: 130px;
+}
+.search-result .finded-results__container .finded--videos .video__item {
+  border: 1px solid #D7D9DA;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.search-result .finded-results__container .finded--videos .video__item .video--card {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  min-height: 230px;
+}
+.search-result .finded-results__container .finded--videos .video__item .video--card .fancy-box {
+  height: 230px;
+}
+.search-result .finded-results__container .finded--videos .video__item .video--card .fancy-box img {
+  width: 288px;
+  height: 230px;
+  border-radius: 12px 0 0 12px;
+}
+.search-result .finded-results__container .finded--videos .video__item .video--card .fancy-box .play-icon {
+  left: 32%;
+  top: 25%;
+}
+.search-result .finded-results__container .finded--videos .video__item .video--card-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px 0 24px;
+}
+.search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn {
   display: inline-flex;
   justify-content: center;
   flex-direction: row;
@@ -1624,21 +1621,56 @@ textarea:focus {
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #D7D9DA;
-  margin-left: 130px;
 }
-.search-result .finded-results__container .finded--blogs .card--item .card--body .go-to-btn img {
+.search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn img {
   content: url("../../../assets/images/icons/gray-arrow-right.png");
 }
-.search-result .finded-results__container .finded--blogs .card--item:hover {
-  border: 1px solid transparent;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
+.search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn:hover {
+  background-color: #FF515B;
+  color: #fff;
+  border: 1px solid #FF515B;
 }
-.search-result .finded-results__container .finded--blogs .card--item:hover .go-to-btn {
-  background-color: #FF515B !important;
-  border: 1px solid transparent;
-}
-.search-result .finded-results__container .finded--blogs .card--item:hover .go-to-btn img {
+.search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn:hover img {
   content: url("../../../assets/images/icons/white-arrow-right.png");
+}
+.search-result .finded-results__container .finded--interviews,
+.search-result .finded-results__container .finded--projects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+.search-result__pagination {
+  text-align: center;
+}
+.search-result__pagination a {
+  font-size: 16px;
+  color: #353535;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+.search-result__pagination a i {
+  font-size: 25px;
+  font-weight: 500;
+}
+.search-result__pagination a:not(:last-of-type) {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 0.5px solid #B3B3B3;
+  background-color: #fff;
+  margin-right: 16px;
+}
+.search-result__pagination a:not(:last-of-type):hover {
+  background-color: #FF515B;
+  border: 0.5px solid #FF515B;
+  color: #fff;
 }
 
 @media screen and (max-width: 992px) {
@@ -1821,14 +1853,14 @@ textarea:focus {
   .blog-news .blog-news__cards .card--item {
     margin: 0 0 24px 0;
   }
-  .blog-news .blog-news__cards .card--item .card--footer .card--title {
+  .blog-news .blog-news__cards .card--item .card--body .card--title {
     font-size: 16px;
     color: #4D7FBA;
     font-weight: 500;
     line-height: 24px;
     max-height: 24px;
   }
-  .blog-news .blog-news__cards .card--item .card--footer .go-to-btn {
+  .blog-news .blog-news__cards .card--item .card--body .go-to-btn {
     margin: 0 auto;
   }
   .blog-news .more-btn-box {

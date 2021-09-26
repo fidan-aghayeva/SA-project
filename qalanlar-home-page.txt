@@ -1,5 +1,5 @@
-1.submenu düzəltmək
-2.lang menuda kənara basanda bağlanmalıdır
+1.mobil menu butun ekrani tutmalidir
+2.sayta animasiyalar elave et
 3.slider oxlardakı problemə bax
 4.buttonlara animasiya əlavə et
 6.esas sehifeye go-to-top elave et

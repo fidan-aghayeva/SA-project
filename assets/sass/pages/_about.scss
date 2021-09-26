@@ -1,0 +1,222 @@
+.about-page {
+    &__overview {
+        @include fullBgImage;
+        background-image: url('/assets/images/bg-images/about-bg.png');
+        @include flexContainer(flex,
+        space-between,
+        row);
+        align-items: center;
+        padding: 90px 8% 0 8%;
+        &--content {
+            .overview-title {
+                @include font(42px,
+                #00326C,
+                700,
+                63px);
+                margin-bottom: 16px;
+            }
+            p {
+                @include font(18px,
+                #00326CB2,
+                400,
+                28px);
+            }
+        }
+        &--image {
+            img {
+                width: 580px;
+                height: 580px;
+                transform: translateY(7px);
+                margin: 0 80px 0 50px;
+            }
+        }
+    }
+    .certfications-licences {
+        @include flexContainer(flex,
+        space-between,
+        row);
+        padding: 140px 8% 200px 8%;
+        &__title {
+            padding-bottom: 10px;
+            span {
+                @include flexContainer(inline-flex,
+                flex-start,
+                row);
+                @include font(18px,
+                #000,
+                500,
+                27px);
+                img {
+                    margin-right: 15px;
+                }
+            }
+            &--text {
+                @include font(15px,
+                #3e3e3e,
+                400,
+                22.5px);
+                padding-left: 35px;
+            }
+        }
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 24px;
+            .item {
+                @include font(15px,
+                #000,
+                400,
+                22.5px);
+                @include flexContainer(inline-flex,
+                center,
+                column);
+                align-items: center;
+                padding: 30px;
+                background-color: #fff;
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+            }
+        }
+    }
+    .experiences-education {
+        @include flexContainer(flex,
+        space-between,
+        row);
+        align-items: flex-start;
+        padding: 0 8% 130px 8%;
+        h3 {
+            @include font(28px,
+            #000,
+            500,
+            42px);
+            padding-bottom: 60px;
+        }
+        .experiences-items__container,
+        .education-items__container {
+            @include flexContainer(inline-flex,
+            space-between,
+            row);
+            align-items: flex-start;
+            ul {
+                margin: 0 52px 0 30px;
+                border-left: 1px solid $blueColor;
+                li {
+                    padding-bottom: 180px;
+                    transform: translateX(-12px);
+                    span {
+                        display: inline-flex;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background-color: $blueColor;
+                    }
+                    &:last-child {
+                        // display: none;
+                    }
+                }
+            }
+        }
+        .experiences-items__container li:last-child {
+            padding-bottom: 140px;
+        }
+        .education-items__container li:last-child {
+            padding-bottom: 140px;
+        }
+        .experiences-item,
+        .education-item {
+            @include transition15;
+            @include flexContainer(flex,
+            start,
+            column);
+            align-items: flex-start;
+            max-width: 496px;
+            width: 496px;
+            min-height: 170px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+            span {
+                margin-bottom: 5px;
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+            &:hover {
+                background-color: $blueColor;
+                .workplace,
+                .university {
+                    color: #fff;
+                }
+                .job,
+                .specialty,
+                .date {
+                    color: #EBEBEB;
+                }
+            }
+        }
+        .experiences-item .workplace,
+        .education-item .university {
+            @include font(16px,
+            #000,
+            500,
+            24px);
+        }
+        .experiences-item .job,
+        .education-item .specialty {
+            @include font(15px,
+            #818181,
+            400,
+            22.5px);
+        }
+        .experiences-item .date,
+        .education-item .date {
+            @include font(15px,
+            $blueColor,
+            400,
+            22.5px);
+        }
+    }
+    .about-me {
+        @include flexContainer(flex,
+        space-between,
+        row);
+        padding: 0 8% 120px 8%;
+        align-items: flex-start;
+        &__image {
+            position: relative;
+            min-width: 534px;
+            min-height: 554px;
+            .ovarlay {
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 496px;
+                height: 481px;
+                background-color: $pinkColor;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 40px;
+                width: 496px;
+                height: 481px;
+            }
+        }
+        &__content {
+            padding: 30px 0 0 30px;
+            .title {
+                @include font(36px,
+                #000,
+                400,
+                54px);
+                margin-bottom: 16px;
+            }
+            p {
+                @include font(16px,
+                #555555,
+                400,
+                26px);
+            }
+        }
+    }
+}
