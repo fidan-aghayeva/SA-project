@@ -4,10 +4,51 @@
     @include font(15px, #fff, 400, 22.5px);
     background-color: #525564;
     color: #fff;
+    >div {
+        padding: 0 20px;
+    }
     .footer-logo {
         @include flexContainer(flex, center, row);
     }
     a {
         color: $lightPinkColor;
+    }
+}
+
+// media
+@media screen and (max-width:576px) {
+    .footer-content {
+        @include sectionPadding($vertical: 30px);
+        @include flexContainer(flex, space-between, column);
+        >div {
+            text-align: center;
+        }
+        div:first-child {
+            order: 2;
+            margin-bottom: 15px;
+        }
+        .footer-logo {
+            @include flexContainer(flex, center, row);
+            order: 1;
+            margin-bottom: 15px;
+        }
+        .designed-by {
+            order: 3;
+        }
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .footer-content {
+        @include sectionPadding($vertical: 30px, $horizontal: 2%)
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1340px) {
+    .footer-content {
+        padding: 30px 4%;
+        >div {
+            padding: 0;
+        }
     }
 }

@@ -36,3 +36,23 @@
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
     }
 }
+
+// media
+@media screen and (max-width: 870px) {
+    .interview-item {
+        .interview--card {
+            flex-direction: column;
+            &-image {
+                width: 100%;
+                height: 230px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &-body {
+                padding: 20px 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@media screen and (max-width: 576px) {
+    .page-header {
+        padding: 35px 8%;
+        height: 96px;
+        &__content {
+            h1 {
+                @include font(18px, #fff, normal, 25px);
+                margin-bottom: 0px;
+                text-align: center;
+                max-height: 54px;
+                overflow-y: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .page-header {
+        padding: 45px 8%;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-header {
+        &__content {
+            h1 {
+                @include font(20px, #fff, normal, 30px);
+                margin-bottom: 0px;
+                text-align: center;
+            }
+        }
+        &__links {
+            display: none;
+        }
+    }
+}

@@ -12,12 +12,12 @@
             text-align: center;
             .page-title {
                 @include font(24px,
-                #4A99D3,
+                #4a99d3,
                 500,
                 36px);
                 width: 160px;
                 margin: 0 auto 50px auto;
-                border-bottom: 4px solid #4A99D3;
+                border-bottom: 4px solid #4a99d3;
                 border-radius: 2px;
             }
             >div {
@@ -32,7 +32,7 @@
                     width: 60%;
                     label {
                         @include font(20px,
-                        #0F001A,
+                        #0f001a,
                         400,
                         30px);
                         margin-bottom: 30px;
@@ -40,8 +40,8 @@
                     input,
                     textarea {
                         width: 100%;
-                        background: #FFFFFF;
-                        border: 1px solid #DEDEDE;
+                        background: #ffffff;
+                        border: 1px solid #dedede;
                         border-radius: 12px;
                         padding: 18px 16px;
                         margin-bottom: 16px;
@@ -87,7 +87,7 @@
                             border-radius: 150px;
                             padding: 5px;
                             margin-right: 16px;
-                            background-color: #32BEA6;
+                            background-color: #32bea6;
                         }
                     }
                 }
@@ -104,7 +104,7 @@
                     a {
                         display: inline-flex;
                         align-items: center;
-                        color: #0F001A;
+                        color: #0f001a;
                         margin-bottom: 30px;
                         i {
                             margin-right: 10px;
@@ -131,5 +131,39 @@
                 }
             }
         }
+    }
+}
+
+// media
+@media screen and (max-width: 768px) {
+    .contact-page {
+        padding: 120px 16px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contact-page {
+        &__container {
+            padding: 0;
+            background-image: none;
+            .page-content {
+                padding: 60px 16px;
+                >div {
+                    flex-direction: column;
+                    form {
+                        width: 100%;
+                    }
+                    .contact-info {
+                        padding: 60px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1110px) {
+    .contact-page__container {
+        padding: 0;
     }
 }

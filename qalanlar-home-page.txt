@@ -1,6 +1,5 @@
 1.mobil menu butun ekrani tutmalidir
 2.sayta animasiyalar elave et
-3.slider oxlardakı problemə bax
 4.buttonlara animasiya əlavə et
-6.esas sehifeye go-to-top elave et
-7.ana sehife books sliderde box-shadow problemi
+7.search input
+8.author quote-u daha optimal yaz

@@ -70,4 +70,28 @@ document.body.addEventListener('click', function () {
   if (desktopDropdown.classList.contains('active')) {
     desktopDropdown.classList.remove('active');
   }
+
+  if (desktopArrowIcon.className === 'fa fa-angle-up' || mobileArrowIcon.className === 'fa fa-angle-up') {
+    desktopArrowIcon.className = 'fa fa-angle-down';
+    mobileArrowIcon.className = 'fa fa-angle-down';
+  }
+}); // go to top
+
+var goToTop = document.querySelector('.go-to-top');
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    goToTop.style.display = 'inline-flex';
+  } else {
+    goToTop.style.display = 'none';
+  }
+}
+
+goToTop.addEventListener('click', function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });

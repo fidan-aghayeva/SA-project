@@ -40,16 +40,17 @@ $('.owl-carousel-books').owlCarousel({
 
 $('.owl-carousel-videos').owlCarousel({
     loop: true,
-    margin: 0,
+    margin: 24,
     nav: true,
     responsive: {
         0: {
             items: 1,
         },
-        600: {
-            items: 1,
+        576: {
+            items: 2,
+            margin: 20,
         },
-        1000: {
+        992: {
             items: 3,
         },
     },
@@ -87,32 +88,4 @@ $('.owl-carousel-interview-details').owlCarousel({
             items: 1,
         },
     },
-});
-
-const owlPrevArrow = document.querySelectorAll(
-    '.custom-arrows .owl-nav .owl-prev'
-);
-
-const owlNextArrow = document.querySelectorAll(
-    '.custom-arrows .owl-nav .owl-next'
-);
-
-owlPrevArrow.forEach(item => {
-    item.innerHTML = `<img src="../../assets/images/icons/blue-prev-arrow.png" alt="">`;
-    item.addEventListener('mouseover', function() {
-        item.innerHTML = `<img src="../../assets/images/icons/slider-white-prev-arrow.png" alt="">`;
-    });
-    item.addEventListener('mouseout', function() {
-        item.innerHTML = `<img src="../../assets/images/icons/blue-prev-arrow.png" alt="">`;
-    });
-});
-
-owlNextArrow.forEach(item => {
-    item.innerHTML = `<img src="../../assets/images/icons/blue-next-arrow.png" alt="">`;
-    item.addEventListener('mouseover', function() {
-        item.innerHTML = `<img src="../../assets/images/icons/slider-white-next-arrow.png" alt="">`;
-    });
-    item.addEventListener('mouseout', function() {
-        item.innerHTML = `<img src="../../assets/images/icons/blue-next-arrow.png" alt="">`;
-    });
 });

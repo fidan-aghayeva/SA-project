@@ -19,7 +19,9 @@
             }
         }
         &__buttons {
-            margin-top: 40px;
+            .btn {
+                margin-top: 30px;
+            }
             .btn-blue-bg {
                 border: 1px solid $blueColor;
                 background-color: $blueColor;
@@ -91,52 +93,14 @@
             }
             &__content {
                 .books__item {
-                    padding: 30px;
+                    margin: 30px;
                 }
-            }
-            .owl-dots {
-                display: none;
             }
             .owl-theme .owl-nav {
                 position: absolute;
                 bottom: 48px;
                 right: 100px;
                 margin-top: 0;
-                .owl-prev {
-                    @include flexContainer(inline-flex,
-                    center,
-                    column);
-                    @include transition15;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 8px;
-                    border: 1px solid $blueColor;
-                    background-color: #fff;
-                    margin-right: 20px;
-                    span {
-                        display: none;
-                    }
-                    &:hover {
-                        background-color: $blueColor;
-                    }
-                }
-                .owl-next {
-                    @include flexContainer(inline-flex,
-                    center,
-                    column);
-                    @include transition15;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 8px;
-                    border: 1px solid $blueColor;
-                    background-color: #fff;
-                    span {
-                        display: none;
-                    }
-                    &:hover {
-                        background-color: $blueColor;
-                    }
-                }
             }
         }
     }
@@ -249,50 +213,12 @@
             }
         }
         .video__item {
-            padding: 30px 15px;
-        }
-        .owl-dots {
-            display: none;
+            margin: 24px 0;
         }
         .owl-theme .owl-nav {
             position: absolute;
             top: -75px;
-            right: 10px;
+            right: -5px;
             margin-top: 0;
-            .owl-prev {
-                @include flexContainer(inline-flex,
-                center,
-                column);
-                @include transition15;
-                width: 40px;
-                height: 40px;
-                border-radius: 8px;
-                border: 1px solid $blueColor;
-                background-color: #fff;
-                margin-right: 20px;
-                span {
-                    display: none;
-                }
-                &:hover {
-                    background-color: $blueColor;
-                }
-            }
-            .owl-next {
-                @include flexContainer(inline-flex,
-                center,
-                column);
-                @include transition15;
-                width: 40px;
-                height: 40px;
-                border-radius: 8px;
-                border: 1px solid $blueColor;
-                background-color: #fff;
-                span {
-                    display: none;
-                }
-                &:hover {
-                    background-color: $blueColor;
-                }
-            }
         }
     }

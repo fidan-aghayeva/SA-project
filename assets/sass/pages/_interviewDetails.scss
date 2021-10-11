@@ -45,7 +45,7 @@
     .publish-date-and-share {
         padding: 30px 0;
         .publish-date {
-            @include font(14px, #989B9C, 400, 21px);
+            @include font(14px, #989b9c, 400, 21px);
         }
     }
     .interview-detail {
@@ -53,6 +53,48 @@
             padding: 0 200px;
             &--content {
                 @include font(16px, #555, 500, 26px);
+            }
+        }
+    }
+}
+
+// media
+@media screen and (max-width: 576px) {
+    .interview-details {
+        .interview-detail {
+            &--slider .detail-item {
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .interview-details {
+        .interview-detail {
+            &--slider .detail-item {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .interview-details {
+        padding: 37px 16px 120px 16px;
+        .interview-detail {
+            &__container {
+                padding: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+    .interview-details {
+        .interview-detail {
+            &__container {
+                padding: 0px 100px;
             }
         }
     }

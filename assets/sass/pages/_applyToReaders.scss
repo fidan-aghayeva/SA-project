@@ -20,3 +20,31 @@
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .appealToReaders-page__container .section-image img {
+        width: 100%;
+        height: 338px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .appealToReaders-page {
+        padding: 60px 16px 120px 16px;
+        &__container {
+            @include flexContainer(flex, center, column);
+            .section-content {
+                padding: 30px 0 0 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+    .appealToReaders-page__container .section-image img {
+        width: 400px;
+    }
+    .appealToReaders-page__container .section-content {
+        padding: 50px 0 0 40px;
+    }
+}

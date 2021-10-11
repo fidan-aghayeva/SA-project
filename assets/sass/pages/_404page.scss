@@ -28,3 +28,56 @@
         }
     }
 }
+
+// media
+@media screen and (max-width: 576px) {
+    .error-page {
+        div {
+            h1 {
+                @include font(96px,
+                $blueColor,
+                400,
+                264px);
+            }
+            h5 {
+                @include font(32px,
+                #000,
+                400,
+                39px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .error-page {
+        div {
+            h1 {
+                @include font(176px,
+                $blueColor,
+                400,
+                144px);
+            }
+            h5 {
+                @include font(24px,
+                #000,
+                400,
+                30px);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .error-page {
+        padding-bottom: 0;
+        div {
+            background-image: url('../../../assets/images/bg-images/404page-bg-mobile.png');
+            padding: 50px 24px 200px 24px;
+            p {
+                width: 100%;
+            }
+        }
+    }
+}

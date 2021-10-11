@@ -12,12 +12,15 @@
  * - Author          : hp
  * - Modification    : 
  **/
-$(document).ready(function () {
-  $('.owl-carousel-books').owlCarousel();
-});
-$(document).ready(function () {
-  $('.owl-carousel-videos').owlCarousel();
-});
+function callCarousel(className) {
+  $(document).ready(function () {
+    $(className).owlCarousel();
+  });
+}
+
+callCarousel('.owl-carousel-books');
+callCarousel('.owl-carousel-videos');
+callCarousel('.owl-carousel-blog-details');
 $('.owl-carousel-books').owlCarousel({
   loop: true,
   margin: 0,
@@ -36,6 +39,23 @@ $('.owl-carousel-books').owlCarousel({
 });
 $('.owl-carousel-videos').owlCarousel({
   loop: true,
+  margin: 24,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    576: {
+      items: 2,
+      margin: 20
+    },
+    992: {
+      items: 3
+    }
+  }
+});
+$('.owl-carousel-blog-details').owlCarousel({
+  loop: true,
   margin: 0,
   nav: true,
   responsive: {
@@ -46,27 +66,23 @@ $('.owl-carousel-videos').owlCarousel({
       items: 1
     },
     1000: {
-      items: 3
+      items: 1
     }
   }
 });
-var owlPrevArrow = document.querySelectorAll('.owl-nav .owl-prev');
-var owlNextArrow = document.querySelectorAll('.owl-nav .owl-next');
-owlPrevArrow.forEach(function (item) {
-  item.innerHTML = "<img src=\"../../assets/images/icons/blue-prev-arrow.png\" alt=\"\">";
-  item.addEventListener('mouseover', function () {
-    item.innerHTML = "<img src=\"../../assets/images/icons/slider-white-prev-arrow.png\" alt=\"\">";
-  });
-  item.addEventListener('mouseout', function () {
-    item.innerHTML = "<img src=\"../../assets/images/icons/blue-prev-arrow.png\" alt=\"\">";
-  });
-});
-owlNextArrow.forEach(function (item) {
-  item.innerHTML = "<img src=\"../../assets/images/icons/blue-next-arrow.png\" alt=\"\">";
-  item.addEventListener('mouseover', function () {
-    item.innerHTML = "<img src=\"../../assets/images/icons/slider-white-next-arrow.png\" alt=\"\">";
-  });
-  item.addEventListener('mouseout', function () {
-    item.innerHTML = "<img src=\"../../assets/images/icons/blue-next-arrow.png\" alt=\"\">";
-  });
+$('.owl-carousel-interview-details').owlCarousel({
+  loop: true,
+  margin: 0,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
 });

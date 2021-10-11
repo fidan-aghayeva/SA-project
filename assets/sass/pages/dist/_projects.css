@@ -1,0 +1,22 @@
+.projects-page {
+  padding: 90px 8% 120px 8%;
+}
+.projects-page .project-items__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .projects-page .project-items__container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 992px) {
+  .projects-page {
+    padding: 60px 16px 120px 16px;
+  }
+  .projects-page .project-items__container .project__item--description {
+    display: flex;
+  }
+}

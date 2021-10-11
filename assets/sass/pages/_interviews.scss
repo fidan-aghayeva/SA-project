@@ -8,3 +8,24 @@
         grid-gap: 25px;
     }
 }
+
+// media
+@media screen and (max-width: 576px) {
+    .interviews-page {
+        .interview-items__container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .interviews-page {
+        padding: 60px 16px 120px 16px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1420px) {
+    .interviews-page {
+        padding: 60px 48px 120px 48px;
+    }
+}

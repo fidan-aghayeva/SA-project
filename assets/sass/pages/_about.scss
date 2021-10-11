@@ -10,14 +10,14 @@
         &--content {
             .overview-title {
                 @include font(42px,
-                #00326C,
+                #00326c,
                 700,
                 63px);
                 margin-bottom: 16px;
             }
             p {
                 @include font(18px,
-                #00326CB2,
+                #00326cb2,
                 400,
                 28px);
             }
@@ -150,7 +150,7 @@
                 .job,
                 .specialty,
                 .date {
-                    color: #EBEBEB;
+                    color: #ebebeb;
                 }
             }
         }
@@ -216,6 +216,105 @@
                 #555555,
                 400,
                 26px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-page {
+        &__overview {
+            padding: 30px 16px 0 16px;
+            flex-direction: column;
+            &--content {
+                .overview-title {
+                    @include font(18px,
+                    #00326c,
+                    700,
+                    27px);
+                }
+                p {
+                    @include font(15px,
+                    #00326cb2,
+                    400,
+                    15px);
+                }
+            }
+            &--image {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                img {
+                    max-width: 254px;
+                    height: 254px;
+                    margin: 0;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .certfications-licences {
+            padding: 60px 16px;
+            flex-direction: column;
+            &__title {
+                padding-bottom: 24px;
+            }
+            &__items {
+                grid-template-columns: 1fr;
+                grid-row-gap: 24px;
+            }
+        }
+        .experiences-education {
+            padding: 0 16px 100px 16px;
+            flex-direction: column;
+            .experiences-items {
+                &__container {
+                    margin-bottom: 60px;
+                    ul {
+                        margin: 0 20px 0 10px;
+                        li:last-child {
+                            padding-bottom: 175px;
+                        }
+                    }
+                    .experiences-item {
+                        width: 100%;
+                    }
+                }
+            }
+            .educations-box {
+                width: 100%;
+                .education-items {
+                    &__container {
+                        width: 100%;
+                        margin-bottom: 60px;
+                        ul {
+                            margin: 0 20px 0 10px;
+                        }
+                        .education-item,
+                        >div {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .about-me {
+            padding: 0 16px 120px 16px;
+            flex-direction: column;
+            &__content {
+                padding: 30px 0 0 0;
+                .title {
+                    @include font(24px,
+                    #000,
+                    400,
+                    36px);
+                }
+            }
+            &__image {
+                width: 100%;
+                min-width: 100%;
+                >div {
+                    width: 100%;
+                }
             }
         }
     }

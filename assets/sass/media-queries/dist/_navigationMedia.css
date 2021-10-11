@@ -1,0 +1,11 @@
+@media screen and (min-width: 992px) and (max-width: 1340px) {
+  .header .desktop-menu {
+    padding: 20px 4% 10px 4%;
+  }
+  .header .desktop-menu__search {
+    padding: 0;
+  }
+  .header .desktop-menu__search-container input {
+    display: none;
+  }
+}

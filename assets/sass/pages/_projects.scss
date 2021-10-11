@@ -6,3 +6,23 @@
         grid-gap: 25px;
     }
 }
+
+// media
+@media screen and (max-width: 768px) {
+    .projects-page {
+        .project-items__container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .projects-page {
+        padding: 60px 16px 120px 16px;
+        .project-items__container {
+            .project__item--description {
+                display: flex;
+            }
+        }
+    }
+}

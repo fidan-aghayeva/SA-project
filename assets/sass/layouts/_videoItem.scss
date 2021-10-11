@@ -5,29 +5,36 @@
          .fancy-box {
              div {
                  position: relative;
+                 height: 370px;
                  .play-icon {
-                     @include flexContainer(inline-flex, center, row);
+                     @include flexContainer(flex, center, row);
+                     align-items: center;
                      position: absolute;
-                     top: 30%;
-                     left: 37%;
+                     width: 100%;
+                     height: 100%;
+                     top: 0;
+                     left: 0;
                      z-index: 2;
-                     transform: translate(50%, 50%);
-                     width: 56px;
-                     height: 56px;
-                     border-radius: 50%;
-                     background-color: #fff;
-                     color: $blueColor;
-                     font-size: 25px;
-                     padding-left: 5px;
+                     span {
+                         @include flexContainer(inline-flex, center, row);
+                         align-items: center;
+                         width: 56px;
+                         height: 56px;
+                         border-radius: 50%;
+                         background-color: #fff;
+                         color: $blueColor;
+                         font-size: 25px;
+                         padding-left: 5px;
+                     }
                  }
                  img {
                      width: 100%;
-                     height: 260px;
+                     height: 100%;
                  }
              }
          }
          &-body {
-             padding: 20px 80px 20px 30px;
+             padding: 20px 30px;
          }
          &-title {
              @include font(18px, $blueColor, 500, 27px);

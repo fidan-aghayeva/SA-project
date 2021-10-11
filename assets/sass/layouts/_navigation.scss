@@ -71,6 +71,10 @@
             }
             &-container {
                 @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+                a {
+                    @include flexContainer(inline-flex, center, row);
+                    align-items: center;
+                }
                 input {
                     border: none;
                     background-color: #FFF8F8;
@@ -118,7 +122,7 @@
         &__header {
             @include flexContainer(flex, space-between, row);
             background-color: #fff;
-            padding: 15px 25px;
+            padding: 15px 16px;
             >div {
                 @include flexContainer(inline-flex, center, row);
                 align-items: center;
@@ -184,7 +188,7 @@
                         height: 39px;
                         border-radius: 50%;
                         border: 1.5px solid #c2c2e2;
-                        margin-right: 15px;
+                        margin: 5px;
                         color: #fff;
                     }
                 }
@@ -208,6 +212,21 @@
                     &.active {
                         display: block;
                     }
+                }
+            }
+        }
+    }
+}
+
+// media
+@media screen and (min-width:992px) and (max-width:1340px) {
+    .header .desktop-menu {
+        padding: 20px 4% 10px 4%;
+        &__search {
+            padding: 0;
+            &-container {
+                input {
+                    display: none;
                 }
             }
         }

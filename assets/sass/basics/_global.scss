@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
 ul {
@@ -98,4 +103,75 @@ textarea {
             color: $pinkColor;
         }
     }
+}
+
+// slider arrows
+.owl-dots {
+    display: none;
+}
+
+.recommended-books .books-slider .owl-theme .owl-nav .owl-prev,
+.videos-slider .owl-theme .owl-nav .owl-prev {
+    @include flexContainer(inline-flex,
+    center,
+    column);
+    @include transition15;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid $blueColor;
+    background-color: #fff;
+    margin-right: 20px;
+    overflow: hidden;
+    span {
+        content: url('/assets/images/icons/blue-prev-arrow.png');
+    }
+    &:hover {
+        background-color: $blueColor;
+        span {
+            content: url('/assets/images/icons/slider-white-prev-arrow.png')
+        }
+    }
+}
+
+.recommended-books .books-slider .owl-theme .owl-nav .owl-next,
+.videos-slider .owl-theme .owl-nav .owl-next {
+    @include flexContainer(inline-flex,
+    center,
+    column);
+    @include transition15;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid $blueColor;
+    background-color: #fff;
+    overflow: hidden;
+    span {
+        content: url('/assets/images/icons/blue-next-arrow.png');
+    }
+    &:hover {
+        background-color: $blueColor;
+        span {
+            content: url('/assets/images/icons/slider-white-next-arrow.png');
+        }
+    }
+}
+
+.go-to-top {
+    @include flexContainer(inline-flex,
+    center,
+    row);
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $pinkColor;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
 }
