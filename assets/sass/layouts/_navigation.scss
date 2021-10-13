@@ -1,15 +1,19 @@
 // header style
 .header {
     position: relative;
+    .container {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
     .desktop-menu {
         background-color: #fff;
-        padding: 20px 8% 10px 8%;
-        @include flexContainer($flexType: flex, $justifyContent: space-between, $flexDir: row);
+        padding: 20px 0 10px 0;
+        @include flexContainer( $flexType: flex, $justifyContent: space-between, $flexDir: row);
         &__logo {
-            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+            @include flexContainer( $flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
         }
         &__list {
-            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+            @include flexContainer( $flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
         }
         &__list-item {
             position: relative;
@@ -17,14 +21,15 @@
                 @include font(14px, #000, 400, 21px);
                 display: inline-flex;
                 padding: 0 15px;
-                margin-bottom: 10px;
+                &:hover {
+                    text-decoration: none;
+                }
             }
             span {
                 @include font(14px, #000, 400, 21px);
                 display: inline-flex;
                 align-items: center;
                 padding: 0 15px;
-                margin-bottom: 10px;
                 cursor: pointer;
                 i {
                     @include transition15;
@@ -34,12 +39,13 @@
             ul {
                 display: none;
                 position: absolute;
-                top: 55px;
+                top: 60px;
                 left: 0;
                 min-width: 222px;
                 transform: translateX(-50px);
-                border: 0.5px solid #FF515B;
+                border: 0.5px solid #ff515b;
                 border-radius: 6px;
+                background-color: #fff;
                 text-align: center;
                 &.active {
                     display: inline-block !important;
@@ -61,23 +67,23 @@
             }
         }
         &__search {
-            background-color: #FFF8F8;
+            background-color: #fff8f8;
             border-radius: 12px;
             padding: 14px 20px;
             margin-bottom: 10px;
-            @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+            @include flexContainer( $flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
             form {
-                @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+                @include flexContainer( $flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
             }
             &-container {
-                @include flexContainer($flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
+                @include flexContainer( $flexType: inline-flex, $justifyContent: space-between, $flexDir: row);
                 a {
                     @include flexContainer(inline-flex, center, row);
                     align-items: center;
                 }
                 input {
                     border: none;
-                    background-color: #FFF8F8;
+                    background-color: #fff8f8;
                     text-indent: 15px;
                     &:focus {
                         outline: none;
@@ -90,9 +96,8 @@
         }
         .lang-menu {
             position: relative;
-            width: 67px;
             text-align: center;
-            margin-bottom: 10px;
+            margin: 0 0 10px 10px;
             cursor: pointer;
             @include font(14px, #000, 400, 24px);
             &__list {
@@ -122,7 +127,7 @@
         &__header {
             @include flexContainer(flex, space-between, row);
             background-color: #fff;
-            padding: 15px 16px;
+            padding: 15px;
             >div {
                 @include flexContainer(inline-flex, center, row);
                 align-items: center;
@@ -147,15 +152,15 @@
                 @include flexContainer(flex, end, row);
                 align-items: center;
                 width: 100%;
-                padding: 30px 16px;
+                padding: 30px 15px;
                 cursor: pointer;
             }
             .lang-menu {
                 &--mobile {
                     width: 100%;
-                    padding: 16px;
-                    border-top: 0.5px solid #FFFFFF;
-                    border-bottom: 0.5px solid #FFFFFF;
+                    padding: 15px;
+                    border-top: 0.5px solid #ffffff;
+                    border-bottom: 0.5px solid #ffffff;
                 }
                 &__list {
                     &-item {
@@ -169,7 +174,7 @@
                             width: 44px;
                             height: 44px;
                             border-radius: 6px;
-                            background-color: #064DBF;
+                            background-color: #064dbf;
                         }
                         &:not(:last-of-type) {
                             margin-right: 15px;
@@ -195,7 +200,7 @@
             }
         }
         &__list {
-            padding: 30px 16px;
+            padding: 30px 15px;
             &-item {
                 margin-bottom: 30px;
                 a,
@@ -219,16 +224,11 @@
 }
 
 // media
-@media screen and (min-width:992px) and (max-width:1340px) {
-    .header .desktop-menu {
-        padding: 20px 4% 10px 4%;
-        &__search {
-            padding: 0;
-            &-container {
-                input {
-                    display: none;
-                }
-            }
-        }
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .header .desktop-menu__search-container input {
+        width: 60px;
+    }
+    .header .desktop-menu__search {
+        padding: 10px 15px;
     }
 }

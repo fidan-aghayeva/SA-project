@@ -18,8 +18,9 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
+a,
+a:hover {
+    text-decoration: none !important;
 }
 
 p {
@@ -39,7 +40,7 @@ textarea {
     }
 }
 
-.btn {
+.button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -54,9 +55,9 @@ textarea {
     @include flexContainer(flex,
     center,
     column);
-    @include sectionPadding($vertical: 76px);
     align-items: center;
     height: 240px;
+    padding: 76px 0;
     background-color: $blueColor;
     &__content {
         @include flexContainer(flex,
@@ -74,12 +75,12 @@ textarea {
         a {
             position: relative;
             @include font(16px,
-            #D2DBE5,
+            #d2dbe5,
             normal,
             24px);
             padding-right: 15px;
             &:not(:last-of-type)::after {
-                content: ">";
+                content: '>';
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -129,7 +130,7 @@ textarea {
     &:hover {
         background-color: $blueColor;
         span {
-            content: url('/assets/images/icons/slider-white-prev-arrow.png')
+            content: url('/assets/images/icons/slider-white-prev-arrow.png');
         }
     }
 }

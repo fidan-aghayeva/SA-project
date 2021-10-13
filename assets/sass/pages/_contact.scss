@@ -1,5 +1,5 @@
 .contact-page {
-    padding: 90px 8% 120px 8%;
+    padding: 60px 0 120px 0;
     &__container {
         @include fullBgImage;
         background-image: url('/assets/images/cntc-page-element.svg');
@@ -137,7 +137,7 @@
 // media
 @media screen and (max-width: 768px) {
     .contact-page {
-        padding: 120px 16px;
+        padding: 120px 0;
     }
 }
 

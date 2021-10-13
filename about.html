@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/sass/main.css" />
     <!-- font  awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <title>SA</title>
 </head>
 
@@ -15,27 +17,54 @@
     <!-- start header -->
 
     <header class="header">
-        <div class="desktop-menu">
-            <div class="desktop-menu__logo">
-                <img src="./assets/images/header-logo.svg" alt="header-logo" />
-            </div>
-            <nav class="desktop-menu__container">
-                <ul class="desktop-menu__list">
-                    <li class="desktop-menu__list-item"><a href="">Layihələrim</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Kitablar</a></li>
-                    <li class="desktop-menu__list-item">
-                        <a href="">Müsahibələrim</a>
+        <div class="container">
+            <div class="desktop-menu">
+                <div class="desktop-menu__logo">
+                    <a href="./index.html">
+                        <img src="./assets/images/header-logo.svg" alt="header-logo" />
+                    </a>
+                </div>
+                <nav class="desktop-menu__container">
+                    <ul class="desktop-menu__list">
+                        <li class="desktop-menu__list-item">
+                            <a href="./projects.html">Layihələrim</a>
+                        </li>
+                        <li class="desktop-menu__list-item">
+                            <a href="./books.html">Kitablar</a>
+                        </li>
+                        <li class="desktop-menu__list-item">
+                            <a href="./interviews.html">Müsahibələrim</a>
+                        </li>
+                        <li class="desktop-menu__list-item">
+                            <span class="desktop-dropdown-container">Haqqımda <i class="fa fa-angle-down"></i
+              ></a>
+                        <ul class="desktop-dropdown">
+                            <li><a href="./about.html">Özüm haqqımda</a></li>
+                            <li>
+                                <a href="./appealToReaders.html">Oxuculara müraciətim</a>
+                            </li>
+                            <li>
+                                <a href="./certficates.html">Uğurlar & Sertifikatlar</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="desktop-menu__list-item"><a href="">Haqqımda</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Videolar</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Bloq</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Əlaqə</a></li>
+                    <li class="desktop-menu__list-item">
+                        <a href="./videos.html">Videolar</a>
+                    </li>
+                    <li class="desktop-menu__list-item">
+                        <a href="./blogs.html">Bloq</a>
+                    </li>
+                    <li class="desktop-menu__list-item">
+                        <a href="./contact.html">Əlaqə</a>
+                    </li>
                 </ul>
             </nav>
             <div class="desktop-menu__search">
                 <form action="">
                     <div class="desktop-menu__search-container">
-                        <img src="./assets/images/icons/red-search-icon.png" alt="search-icon" />
+                        <a href="">
+                            <img src="./assets/images/icons/red-search-icon.png" alt="search-icon" />
+                        </a>
                         <input type="search" name="header-search" id="header-search" placeholder="Axtar" />
                     </div>
                 </form>
@@ -83,30 +112,51 @@
         </div>
         <nav>
           <ul class="mobile-menu__list">
-            <li class="mobile-menu__list-item"><a href="">Layihələrim</a></li>
-            <li class="mobile-menu__list-item"><a href="">Kitablar</a></li>
             <li class="mobile-menu__list-item">
-              <a href="">Müsahibələrim</a>
+              <a href="./projects.html">Layihələrim</a>
             </li>
-            <li class="mobile-menu__list-item"><a href="">Videolar</a></li>
-            <li class="mobile-menu__list-item"><a href="">Haqqımda</a></li>
-            <li class="mobile-menu__list-item"><a href="">Bloq</a></li>
-            <li class="mobile-menu__list-item"><a href="">Əlaqə</a></li>
-          </ul>
-        </nav>
-        <div class="social-icons">
-          <div>
-            <a href="">
-              <i class="fa fa-facebook"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-linkedin"></i>
-                </a>
+            <li class="mobile-menu__list-item">
+              <a href="./books.html">Kitablar</a>
+            </li>
+            <li class="mobile-menu__list-item">
+              <a href="./interviews.html">Müsahibələrim</a>
+            </li>
+            <li class="mobile-menu__list-item">
+              <a href="./videos.html">Videolar</a>
+            </li>
+            <li class="mobile-menu__list-item mobile-dropdown-container"><span>Haqqımda <i class="fa fa-angle-down"></i></span>
+                            <ul class="mobile-dropdown">
+                                <li class="mobile-menu__list-item"><a href="./about.html">Özüm haqqımda</a></li>
+                                <li class="mobile-menu__list-item">
+                                    <a href="./appealToReaders.html">Oxuculara müraciətim</a>
+                                </li>
+                                <li class="mobile-menu__list-item">
+                                    <a href="./certficates.html">Uğurlar & Sertifikatlar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu__list-item">
+                            <a href="./blogs.html">Bloq</a>
+                        </li>
+                        <li class="mobile-menu__list-item">
+                            <a href="./contact.html">Əlaqə</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social-icons">
+                    <div>
+                        <a href="">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </header>
 
@@ -114,118 +164,141 @@
 
     <section class="about-page">
         <div class="about-page__overview">
-            <div class="about-page__overview--content">
-                <h3 class="overview-title">Sevinc Ayaz</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </div>
-            <div class="about-page__overview--image">
-                <img src="./assets/images/client-photos/about-page-image.png" alt="" />
-            </div>
-        </div>
-        <div class="certfications-licences">
-            <div class="certfications-licences__title">
-                <span>
-            <img src="./assets/images/icons/red-circle.png" alt="" />
-            Licenses & certifications
-          </span>
-                <p class="videos-slider__title--text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </p>
-            </div>
-            <div class="certfications-licences__items">
-                <div class="item">
-                    <img src="./assets/images/certficates/certficate-1.png" alt="" />
-                    <span class="item-des">IT Information Library Foundations Certification (ITIL)</span
-            >
-          </div>
-          <div class="item">
-            <img src="./assets/images/certficates/certficate-2.png" alt="" />
-            <span class="item-des">Professional Scrum Master (PSM I)</span>
+            <div class="container">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div class="about-page__overview--content">
+                            <h3 class="overview-title">Sevinc Ayaz</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div class="about-page__overview--image">
+                            <img src="./assets/images/client-photos/about-page-image.png" alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="certfications-licences">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-xl-5 col-lg-5 col-12">
+                        <div class="certfications-licences__title">
+                            <span>
+                <img src="./assets/images/icons/red-circle.png" alt="" />
+                Licenses & certifications
+              </span>
+                            <p class="videos-slider__title--text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-12">
+                        <div class="certfications-licences__items">
+                            <div class="item">
+                                <img src="./assets/images/certficates/certficate-1.png" alt="" />
+                                <span class="item-des">IT Information Library Foundations Certification (ITIL)</span
+                    >
+                  </div>
+                  <div class="item">
+                    <img src="./assets/images/certficates/certficate-2.png" alt="" />
+                    <span class="item-des">Professional Scrum Master (PSM I)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
         <div class="experiences-education">
-            <div class="experiences-box">
-                <h3>İş Təcrübəsi</h3>
-                <div class="experiences-items__container">
-                    <ul>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                    </ul>
-                    <div>
-                        <div class="experiences-item">
-                            <span class="workplace">Elektron Hökumətin İnkişafı Mərkəzi / e-Gov Development
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-xl-6 col-12 pb-5">
+                        <div class="experiences-box">
+                            <h3>İş Təcrübəsi</h3>
+                            <div class="experiences-items__container">
+                                <div>
+                                    <div class="experiences-item">
+                                        <span class="workplace">Elektron Hökumətin İnkişafı Mərkəzi / e-Gov Development
                   Center</span
                 >
                 <span class="job"
                   >Head of Digital Solutions Application division</span
                 >
                 <span class="date">Aug 2020 – Present</span>
-                        </div>
-                        <div class="experiences-item">
-                            <span class="workplace">Elektron Hökumətin İnkişafı Mərkəzi / e-Gov Development
+                                    </div>
+                                    <div class="experiences-item">
+                                        <span class="workplace">Elektron Hökumətin İnkişafı Mərkəzi / e-Gov Development
                   Center</span
                 >
                 <span class="job"
                   >Deputy head of Project Management Department</span
                 >
                 <span class="date">Jan 2019 – Jul 2020</span>
-                        </div>
-                        <div class="experiences-item">
-                            <span class="workplace">Central Bank of the Republic of Azerbaijan</span
+                                    </div>
+                                    <div class="experiences-item">
+                                        <span class="workplace">Central Bank of the Republic of Azerbaijan</span
                 >
                 <span class="job">Senior System Administrator</span>
-                            <span class="date">Jan 2017 – Nov 2018</span>
-                        </div>
-                        <div class="experiences-item">
-                            <span class="workplace">Central Bank of the Republic of Azerbaijan</span
+                                        <span class="date">Jan 2017 – Nov 2018</span>
+                                    </div>
+                                    <div class="experiences-item">
+                                        <span class="workplace">Central Bank of the Republic of Azerbaijan</span
                 >
                 <span class="job">Leading Specialist</span>
-                            <span class="date">Feb 2014 – Jan 2018</span>
+                                        <span class="date">Feb 2014 – Jan 2018</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="educations-box">
-                <h3>Təhsil</h3>
-                <div class="education-items__container">
-                    <ul>
-                        <li><span></span></li>
-                        <li><span></span></li>
-                    </ul>
-                    <div>
-                        <div class="education-item">
-                            <span class="university">Bakı Dövlət Universiteti</span>
-                            <span class="specialty">Kompüter elmləri - bakalavr</span>
-                            <span class="date">2002-2006</span>
-                        </div>
-                        <div class="education-item">
-                            <span class="university">Dövlət Neft Akademiyası</span>
-                            <span class="specialty">Kompüter elmləri - magistr</span>
-                            <span class="date">2006-2008</span>
+                    <div class="col-xl-6 col-12 pb-5">
+                        <div class="educations-box">
+                            <h3>Təhsil</h3>
+                            <div class="education-items__container">
+                                <div>
+                                    <div class="education-item">
+                                        <span class="university">Bakı Dövlət Universiteti</span>
+                                        <span class="specialty">Kompüter elmləri - bakalavr</span>
+                                        <span class="date">2002-2006</span>
+                                    </div>
+                                    <div class="education-item">
+                                        <span class="university">Dövlət Neft Akademiyası</span>
+                                        <span class="specialty">Kompüter elmləri - magistr</span>
+                                        <span class="date">2006-2008</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="about-me">
-            <div class="about-me__image">
-                <div class="ovarlay"></div>
-                <div>
-                    <img src="./assets/images/client-photos/about-me-image.png" alt="" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                        <div class="about-me__image">
+                            <div class="ovarlay"></div>
+                            <div>
+                                <img src="./assets/images/client-photos/about-me-image.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+                        <div class="about-me__content">
+                            <h3 class="title">Haqqımda</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. At auctor urna nunc id cursus metus aliquam. Fringilla urna
+                                porttitor rhoncus dolor purus non. In nibh mauris cursus mattis molestie a iaculis at. Odio aenean sed adipiscing diam. Semper viverra nam libero justo laoreet sit. Velit egestas dui id ornare arcu. Diam sollicitudin tempor
+                                id eu nisl nunc mi. <br /><br /> Feugiat pretium nibh ipsum consequat nisl vel pretium. Scelerisque in dictum non consectetur. Lectus sit amet est placerat in egestas erat imperdiet.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="about-me__content">
-                <h3 class="title">Haqqımda</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. At auctor urna nunc id cursus metus aliquam. Fringilla urna
-                    porttitor rhoncus dolor purus non. In nibh mauris cursus mattis molestie a iaculis at. Odio aenean sed adipiscing diam. Semper viverra nam libero justo laoreet sit. Velit egestas dui id ornare arcu. Diam sollicitudin tempor id eu nisl
-                    nunc mi. <br /><br /> Feugiat pretium nibh ipsum consequat nisl vel pretium. Scelerisque in dictum non consectetur. Lectus sit amet est placerat in egestas erat imperdiet.
-                </p>
             </div>
         </div>
     </section>
@@ -242,6 +315,8 @@
     </footer>
 
     <script src="./assets/plugins/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 

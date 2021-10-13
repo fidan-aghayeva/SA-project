@@ -1,4 +1,4 @@
-@media screen and (min-width:576px) and (max-width:768px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
     .main-section {
         &__img {
             img {
@@ -14,7 +14,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .main-section {
         @include sectionPadding($vertical: 30px, $horizontal: 16px);
         justify-content: center;
@@ -27,7 +27,7 @@
                 @include font(18px,
                 $blueColor,
                 700,
-                27px)
+                27px);
             }
             p {
                 @include font(16px,
@@ -38,17 +38,17 @@
             }
         }
         &__buttons {
-            .btn {
+            .button {
                 margin-top: 15px;
             }
             a {
                 margin-bottom: 15px;
             }
-            .btn-blue-bg {
+            .button-blue-bg {
                 padding: 9px 30px;
                 margin-right: 15px;
             }
-            .btn-blue-border {
+            .button-blue-border {
                 padding: 9px 30px;
             }
         }
@@ -84,7 +84,7 @@
                         @include flexContainer(flex,
                         center,
                         column);
-                        background: #FFFFFF;
+                        background: #ffffff;
                         margin-top: 40px;
                         padding: 30px 16px 30px 16px;
                         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
@@ -95,7 +95,7 @@
                                 padding-left: 0;
                                 margin-bottom: 30px;
                                 &::before {
-                                    content: "";
+                                    content: '';
                                     position: absolute;
                                     top: 40px;
                                     left: 35%;
@@ -114,7 +114,7 @@
             .owl-dots {
                 display: block;
                 .owl-dot span {
-                    background-color: #A9C6E8;
+                    background-color: #a9c6e8;
                 }
                 .owl-dot.active span,
                 .owl-theme .owl-dots .owl-dot:hover span {
@@ -244,7 +244,7 @@
             .owl-dots {
                 display: block;
                 .owl-dot span {
-                    background-color: #A9C6E8;
+                    background-color: #a9c6e8;
                 }
                 .owl-dot.active span {
                     background-color: $blueColor;
@@ -257,7 +257,7 @@
     }
 }
 
-@media screen and (min-width:768px) and (max-width:992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     .main-section {
         padding: 65px 2%;
         &__img {
@@ -271,7 +271,7 @@
             }
         }
         &__buttons {
-            .btn {
+            .button {
                 margin-top: 30px;
                 padding: 10px 35px;
                 &-blue-bg {
@@ -340,7 +340,7 @@
     }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
     .header {
         .desktop-menu {
             display: none;
@@ -348,7 +348,7 @@
     }
 }
 
-@media screen and (min-width:993px) {
+@media screen and (min-width: 993px) {
     .header {
         .mobile-menu {
             display: none;
@@ -359,7 +359,7 @@
     }
 }
 
-@media screen and (min-width:993px) and (max-width:1130px) {
+@media screen and (min-width: 993px) and (max-width: 1130px) {
     .author-quote .quote__content .quote--text-container .author-des-and-social-icons {
         flex-direction: column;
         align-items: flex-start;
@@ -375,7 +375,7 @@
     }
 }
 
-@media screen and (min-width:993px) and (max-width:1340px) {
+@media screen and (min-width: 993px) and (max-width: 1340px) {
     .main-section {
         padding: 65px 4%;
         &__img {

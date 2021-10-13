@@ -13,34 +13,62 @@
     <link rel="stylesheet" href="./assets/plugins/owl-carousel/owl.theme.default.min.css" />
     <!-- fancy box -->
     <link rel="stylesheet" href="assets/plugins/fancy-box/jquery.fancybox.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <title>SA</title>
 </head>
 
 <body>
     <!-- start header -->
-
     <header class="header">
-        <div class="desktop-menu">
-            <div class="desktop-menu__logo">
-                <img src="./assets/images/header-logo.svg" alt="header-logo" />
-            </div>
-            <nav class="desktop-menu__container">
-                <ul class="desktop-menu__list">
-                    <li class="desktop-menu__list-item"><a href="">Layihələrim</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Kitablar</a></li>
-                    <li class="desktop-menu__list-item">
-                        <a href="">Müsahibələrim</a>
+        <div class="container">
+            <div class="desktop-menu">
+                <div class="desktop-menu__logo">
+                    <a href="./index.html">
+                        <img src="./assets/images/header-logo.svg" alt="header-logo" />
+                    </a>
+                </div>
+                <nav class="desktop-menu__container">
+                    <ul class="desktop-menu__list">
+                        <li class="desktop-menu__list-item">
+                            <a href="./projects.html">Layihələrim</a>
+                        </li>
+                        <li class="desktop-menu__list-item">
+                            <a href="./books.html">Kitablar</a>
+                        </li>
+                        <li class="desktop-menu__list-item">
+                            <a href="./interviews.html">Müsahibələrim</a>
+                        </li>
+                        <li class="desktop-menu__list-item">
+                            <span class="desktop-dropdown-container">Haqqımda <i class="fa fa-angle-down"></i
+              ></a>
+                        <ul class="desktop-dropdown">
+                            <li><a href="./about.html">Özüm haqqımda</a></li>
+                            <li>
+                                <a href="./appealToReaders.html">Oxuculara müraciətim</a>
+                            </li>
+                            <li>
+                                <a href="./certficates.html">Uğurlar & Sertifikatlar</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="desktop-menu__list-item"><a href="">Haqqımda</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Videolar</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Bloq</a></li>
-                    <li class="desktop-menu__list-item"><a href="">Əlaqə</a></li>
+                    <li class="desktop-menu__list-item">
+                        <a href="./videos.html">Videolar</a>
+                    </li>
+                    <li class="desktop-menu__list-item">
+                        <a href="./blogs.html">Bloq</a>
+                    </li>
+                    <li class="desktop-menu__list-item">
+                        <a href="./contact.html">Əlaqə</a>
+                    </li>
                 </ul>
             </nav>
             <div class="desktop-menu__search">
                 <form action="">
                     <div class="desktop-menu__search-container">
-                        <img src="./assets/images/icons/red-search-icon.png" alt="search-icon" />
+                        <a href="">
+                            <img src="./assets/images/icons/red-search-icon.png" alt="search-icon" />
+                        </a>
                         <input type="search" name="header-search" id="header-search" placeholder="Axtar" />
                     </div>
                 </form>
@@ -88,33 +116,53 @@
         </div>
         <nav>
           <ul class="mobile-menu__list">
-            <li class="mobile-menu__list-item"><a href="">Layihələrim</a></li>
-            <li class="mobile-menu__list-item"><a href="">Kitablar</a></li>
             <li class="mobile-menu__list-item">
-              <a href="">Müsahibələrim</a>
+              <a href="./projects.html">Layihələrim</a>
             </li>
-            <li class="mobile-menu__list-item"><a href="">Videolar</a></li>
-            <li class="mobile-menu__list-item"><a href="">Haqqımda</a></li>
-            <li class="mobile-menu__list-item"><a href="">Bloq</a></li>
-            <li class="mobile-menu__list-item"><a href="">Əlaqə</a></li>
-          </ul>
-        </nav>
-        <div class="social-icons">
-          <div>
-            <a href="">
-              <i class="fa fa-facebook"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-linkedin"></i>
-                </a>
+            <li class="mobile-menu__list-item">
+              <a href="./books.html">Kitablar</a>
+            </li>
+            <li class="mobile-menu__list-item">
+              <a href="./interviews.html">Müsahibələrim</a>
+            </li>
+            <li class="mobile-menu__list-item">
+              <a href="./videos.html">Videolar</a>
+            </li>
+            <li class="mobile-menu__list-item mobile-dropdown-container"><span>Haqqımda <i class="fa fa-angle-down"></i></span>
+                            <ul class="mobile-dropdown">
+                                <li class="mobile-menu__list-item"><a href="./about.html">Özüm haqqımda</a></li>
+                                <li class="mobile-menu__list-item">
+                                    <a href="./appealToReaders.html">Oxuculara müraciətim</a>
+                                </li>
+                                <li class="mobile-menu__list-item">
+                                    <a href="./certficates.html">Uğurlar & Sertifikatlar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu__list-item">
+                            <a href="./blogs.html">Bloq</a>
+                        </li>
+                        <li class="mobile-menu__list-item">
+                            <a href="./contact.html">Əlaqə</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social-icons">
+                    <div>
+                        <a href="">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
     </header>
-
     <!-- footer -->
 
     <section class="search-result">
@@ -312,6 +360,8 @@
     </footer>
 
     <script src="./assets/plugins/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="./assets/plugins/fancy-box/jquery.fancybox.min.js"></script>
     <script src="./assets/js/owl.js"></script>

@@ -2,11 +2,7 @@
     &__overview {
         @include fullBgImage;
         background-image: url('/assets/images/bg-images/about-bg.png');
-        @include flexContainer(flex,
-        space-between,
-        row);
-        align-items: center;
-        padding: 90px 8% 0 8%;
+        padding-top: 60px;
         &--content {
             .overview-title {
                 @include font(42px,
@@ -23,21 +19,18 @@
             }
         }
         &--image {
+            width: 100%;
+            height: 590px;
             img {
-                width: 580px;
-                height: 580px;
-                transform: translateY(7px);
-                margin: 0 80px 0 50px;
+                max-width: 100%;
+                height: 100%;
             }
         }
     }
     .certfications-licences {
-        @include flexContainer(flex,
-        space-between,
-        row);
-        padding: 140px 8% 200px 8%;
+        padding: 140px 0 200px 0;
         &__title {
-            padding-bottom: 10px;
+            padding-bottom: 30px;
             span {
                 @include flexContainer(inline-flex,
                 flex-start,
@@ -71,6 +64,7 @@
                 center,
                 column);
                 align-items: center;
+                text-align: center;
                 padding: 30px;
                 background-color: #fff;
                 box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
@@ -82,7 +76,7 @@
         space-between,
         row);
         align-items: flex-start;
-        padding: 0 8% 130px 8%;
+        padding-bottom: 130px;
         h3 {
             @include font(28px,
             #000,
@@ -96,40 +90,23 @@
             space-between,
             row);
             align-items: flex-start;
-            ul {
-                margin: 0 52px 0 30px;
-                border-left: 1px solid $blueColor;
-                li {
-                    padding-bottom: 180px;
-                    transform: translateX(-12px);
-                    span {
-                        display: inline-flex;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 50%;
-                        background-color: $blueColor;
-                    }
-                    &:last-child {
-                        // display: none;
-                    }
-                }
+            width: 100%;
+            >div {
+                width: 100%;
+                border-left: 1px solid #4d7fba;
+                padding-left: 64px;
+                margin-left: 30px;
             }
         }
-        .experiences-items__container li:last-child {
-            padding-bottom: 140px;
-        }
-        .education-items__container li:last-child {
-            padding-bottom: 140px;
-        }
-        .experiences-item,
-        .education-item {
+        .experiences-items__container .experiences-item,
+        .education-items__container .education-item {
             @include transition15;
             @include flexContainer(flex,
             start,
             column);
             align-items: flex-start;
-            max-width: 496px;
-            width: 496px;
+            position: relative;
+            width: 100%;
             min-height: 170px;
             background-color: #fff;
             padding: 30px;
@@ -153,79 +130,105 @@
                     color: #ebebeb;
                 }
             }
-        }
-        .experiences-item .workplace,
-        .education-item .university {
-            @include font(16px,
-            #000,
-            500,
-            24px);
-        }
-        .experiences-item .job,
-        .education-item .specialty {
-            @include font(15px,
-            #818181,
-            400,
-            22.5px);
-        }
-        .experiences-item .date,
-        .education-item .date {
-            @include font(15px,
-            $blueColor,
-            400,
-            22.5px);
+            &::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -76px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background-color: $blueColor;
+            }
         }
     }
-    .about-me {
-        @include flexContainer(flex,
-        space-between,
-        row);
-        padding: 0 8% 120px 8%;
-        align-items: flex-start;
-        &__image {
-            position: relative;
-            min-width: 534px;
-            min-height: 554px;
-            .ovarlay {
-                position: absolute;
-                top: 72px;
-                left: 0;
-                width: 496px;
-                height: 481px;
-                background-color: $pinkColor;
-            }
-            img {
-                position: absolute;
-                top: 0;
-                left: 40px;
-                width: 496px;
-                height: 481px;
-            }
+    .experiences-item .workplace,
+    .education-item .university {
+        @include font(16px,
+        #000,
+        500,
+        24px);
+    }
+    .experiences-item .job,
+    .education-item .specialty {
+        @include font(15px,
+        #818181,
+        400,
+        22.5px);
+    }
+    .experiences-item .date,
+    .education-item .date {
+        @include font(15px,
+        $blueColor,
+        400,
+        22.5px);
+    }
+}
+
+.about-me {
+    padding-bottom: 192px;
+    &__image {
+        position: relative;
+        width: 100%;
+        height: 480px;
+        .ovarlay {
+            position: absolute;
+            top: 72px;
+            left: 0;
+            width: 100%;
+            height: 480px;
+            background-color: $pinkColor;
         }
-        &__content {
-            padding: 30px 0 0 30px;
-            .title {
-                @include font(36px,
-                #000,
-                400,
-                54px);
-                margin-bottom: 16px;
-            }
-            p {
-                @include font(16px,
-                #555555,
-                400,
-                26px);
-            }
+        img {
+            position: absolute;
+            bottom: 0px;
+            left: 40px;
+            width: 100%;
+            height: 100%;
         }
+    }
+    &__content {
+        padding: 30px 0 0 50px;
+        .title {
+            @include font(36px,
+            #000,
+            400,
+            54px);
+            margin-bottom: 16px;
+        }
+        p {
+            @include font(16px,
+            #555555,
+            400,
+            26px);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .about-page .certfications-licences__items {
+        grid-template-columns: 1fr;
+        grid-row-gap: 24px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+    .about-page .about-me__image {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
     }
 }
 
 @media screen and (max-width: 768px) {
     .about-page {
         &__overview {
-            padding: 30px 16px 0 16px;
-            flex-direction: column;
+            padding-top: 30px;
             &--content {
                 .overview-title {
                     @include font(18px,
@@ -237,69 +240,44 @@
                     @include font(15px,
                     #00326cb2,
                     400,
-                    15px);
+                    25px);
                 }
             }
             &--image {
-                width: 100%;
                 display: flex;
                 justify-content: flex-end;
-                img {
-                    max-width: 254px;
-                    height: 254px;
-                    margin: 0;
-                    transform: translateY(0);
-                }
+                height: 254px;
             }
         }
         .certfications-licences {
-            padding: 60px 16px;
-            flex-direction: column;
+            padding: 60px 0;
             &__title {
                 padding-bottom: 24px;
             }
-            &__items {
-                grid-template-columns: 1fr;
-                grid-row-gap: 24px;
-            }
         }
         .experiences-education {
-            padding: 0 16px 100px 16px;
-            flex-direction: column;
-            .experiences-items {
-                &__container {
-                    margin-bottom: 60px;
-                    ul {
-                        margin: 0 20px 0 10px;
-                        li:last-child {
-                            padding-bottom: 175px;
-                        }
-                    }
-                    .experiences-item {
-                        width: 100%;
-                    }
-                }
+            padding-bottom: 60px;
+            h3 {
+                @include font(16px,
+                #000,
+                500,
+                24px);
+                padding-bottom: 30px;
             }
-            .educations-box {
-                width: 100%;
-                .education-items {
-                    &__container {
-                        width: 100%;
-                        margin-bottom: 60px;
-                        ul {
-                            margin: 0 20px 0 10px;
-                        }
-                        .education-item,
-                        >div {
-                            width: 100%;
-                        }
-                    }
+            .experiences-items__container>div,
+            .education-items__container>div {
+                padding-left: 24px;
+                margin-left: 12px;
+            }
+            .experiences-items__container .experiences-item,
+            .education-items__container .education-item {
+                &::before {
+                    left: -36px;
                 }
             }
         }
         .about-me {
-            padding: 0 16px 120px 16px;
-            flex-direction: column;
+            padding-bottom: 120px;
             &__content {
                 padding: 30px 0 0 0;
                 .title {
@@ -310,10 +288,18 @@
                 }
             }
             &__image {
-                width: 100%;
-                min-width: 100%;
-                >div {
-                    width: 100%;
+                height: 340px;
+                max-width: 100%;
+                .ovarlay {
+                    top: 26px;
+                    height: 310px;
+                    width: 94%;
+                }
+                img {
+                    top: 0px;
+                    left: 6%;
+                    height: 310px;
+                    width: 94%;
                 }
             }
         }
