@@ -3,53 +3,73 @@
     border: 1px solid #d7d9da;
     border-radius: 12px;
     cursor: pointer;
+    margin-bottom: 30px;
+
     .interview--card {
         @include flexContainer(flex, space-between, row);
+
         &-image {
             width: 184px;
-            height: 184px;
+            height: 100%;
+
             img {
                 width: 184px;
-                height: 184px;
+                height: 100%;
                 border-radius: 12px;
                 object-fit: cover;
             }
         }
-        &-body {
-            padding: 20px 25px;
-        }
+
         &-title {
             @include font(18px, $blueColor, 500, 27px);
+            padding: 10px 25px 0 25px;
         }
+
         &-date {
             @include font(14px, $pinkColor, 500, 21px);
             display: inline-flex;
             margin-bottom: 10px;
+            padding: 0 25px;
         }
+
         &-description {
             @include font(15px, #6a6a6a, normal, 22px);
             max-height: 66px;
             overflow-y: hidden;
+            padding: 0 25px;
         }
     }
+
     &:hover {
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
     }
 }
 
 // media
-@media screen and (max-width: 870px) {
+@media (max-width:992px) {
+
+    .interview-item .interview--card-title,
+    .interview-item .interview--card-date,
+    .interview-item .interview--card-description {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
     .interview-item {
         .interview--card {
             flex-direction: column;
+
             &-image {
                 width: 100%;
                 height: 230px;
+
                 img {
                     width: 100%;
                     height: 100%;
                 }
             }
+
             &-body {
                 padding: 20px 12px;
             }

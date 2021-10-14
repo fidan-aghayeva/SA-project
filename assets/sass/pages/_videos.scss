@@ -1,12 +1,6 @@
 // videos page
 .videos-page {
-    padding: 90px 8% 120px 8%;
-    .video-items__container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 25px;
-    }
+    padding: 90px 0 120px 0;
 }
 
 // media
@@ -25,7 +19,6 @@
 @media screen and (max-width:768px) {
     .videos-page {
         .video-items__container {
-            grid-template-columns: 1fr;
             .video__item .video--card {
                 &-body {
                     padding: 15px 25px;
@@ -37,6 +30,6 @@
 
 @media screen and (max-width:992px) {
     .videos-page {
-        padding: 60px 16px 120px 16px;
+        padding: 60px 0 120px 0;
     }
 }

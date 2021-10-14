@@ -1,5 +1,5 @@
 .search-result {
-    padding: 60px 8% 120px 8%;
+    padding: 60px 0 120px 0;
     &__container {
         &--title {
             @include font(24px, #000, 400, 36px);
@@ -62,8 +62,8 @@
                         @include flexContainer(flex, space-between, row);
                         align-items: center;
                         padding: 30px 24px;
-                        .go-to-btn {
-                            margin-left: 130px;
+                        div:first-child {
+                            padding-right: 130px;
                         }
                     }
                 }
@@ -118,13 +118,6 @@
                         }
                     }
                 }
-            }
-            .finded--interviews,
-            .finded--projects {
-                width: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 25px;
             }
         }
     }

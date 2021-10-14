@@ -1,5 +1,6 @@
  .video__item {
      @include transition15;
+     margin-bottom: 30px;
      .video--card {
          background-color: #fff;
          .fancy-box {

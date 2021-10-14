@@ -1,4 +1,10 @@
 // books page 
 .books-page {
-    padding: 90px 8% 120px 8%;
+    padding: 90px 0 120px 0;
+}
+
+@media (max-width:768px) {
+    .books-page {
+        padding: 60px 0 120px 0;
+    }
 }

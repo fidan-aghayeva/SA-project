@@ -6,6 +6,7 @@
             }
         }
     }
+
     .blog-news {
         &__cards {
             grid-template-columns: 1fr 1fr !important;
@@ -21,42 +22,51 @@
         flex-direction: column;
         align-items: flex-start;
         background-image: url('../../../assets/images/bg-images/home-page-bg-mobile.png');
+
         &__content {
             order: 2;
+
             h1 {
                 @include font(18px,
-                $blueColor,
-                700,
-                27px);
+                    $blueColor,
+                    700,
+                    27px);
             }
+
             p {
                 @include font(16px,
-                rgba(0, 50, 108, 0.7),
-                400,
-                24px);
+                    rgba(0, 50, 108, 0.7),
+                    400,
+                    24px);
                 padding-top: 15px;
             }
         }
+
         &__buttons {
             .button {
                 margin-top: 15px;
             }
+
             a {
                 margin-bottom: 15px;
             }
+
             .button-blue-bg {
                 padding: 9px 30px;
                 margin-right: 15px;
             }
+
             .button-blue-border {
                 padding: 9px 30px;
             }
         }
+
         &__img {
             width: 100%;
             padding: 0;
             margin-right: 0;
             order: 1;
+
             img {
                 content: url('/assets/images/client-photos/mobile-image-1.png');
                 width: 100%;
@@ -65,62 +75,41 @@
             }
         }
     }
+
     // recommend books section
     .recommended-books {
         .section-bg-image {
             display: none;
         }
+
         .books-slider {
             padding: 60px 16px;
+
             &__title {
                 width: 100%;
                 padding-bottom: 90px;
             }
+
             &__content {
                 .books__item {
                     box-shadow: none;
                     padding: 0;
-                    >div {
-                        @include flexContainer(flex,
-                        center,
-                        column);
-                        background: #ffffff;
-                        margin-top: 40px;
-                        padding: 30px 16px 30px 16px;
-                        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
-                        .book-description {
-                            padding: 30px 0px;
-                            text-align: center;
-                            .book-name {
-                                padding-left: 0;
-                                margin-bottom: 30px;
-                                &::before {
-                                    content: '';
-                                    position: absolute;
-                                    top: 40px;
-                                    left: 35%;
-                                }
-                            }
-                            .book-des-content {
-                                position: relative;
-                                max-height: 96px;
-                                overflow-y: hidden;
-                                margin-bottom: 15px;
-                            }
-                        }
-                    }
                 }
             }
+
             .owl-dots {
                 display: block;
+
                 .owl-dot span {
                     background-color: #a9c6e8;
                 }
+
                 .owl-dot.active span,
                 .owl-theme .owl-dots .owl-dot:hover span {
                     background-color: $blueColor;
                 }
             }
+
             .owl-theme .owl-nav {
                 position: absolute;
                 top: -30px;
@@ -129,10 +118,12 @@
             }
         }
     }
+
     // author quote section
     .author-quote {
         @include sectionPadding($vertical: 15px, $horizontal: 16px);
         min-height: 450px;
+
         .quote__content {
             .quote--icon {
                 position: absolute;
@@ -140,80 +131,96 @@
                 left: 16px;
                 opacity: 0.3;
             }
+
             .quote--text-container {
                 position: relative;
                 top: 28px;
                 width: 95%;
                 padding-left: 0px;
+
                 .quote--text {
                     @include font(15px,
-                    #fff,
-                    400,
-                    27px);
+                        #fff,
+                        400,
+                        27px);
                 }
+
                 .author-des-and-social-icons {
                     @include flexContainer(flex,
-                    start,
-                    column);
+                        start,
+                        column);
                     align-items: flex-start;
                     width: 70%;
                     padding-top: 40px;
                 }
             }
+
             .social-icons {
                 margin: 30px 0;
             }
+
             .author-image {
                 position: absolute;
                 bottom: 0px;
                 right: 16px;
                 width: 136px;
                 height: 216px;
+
                 img {
                     width: 100%;
                 }
             }
         }
     }
+
     .blog-news {
         &.home-page-blogs {
-            padding: 60px 16px;
+            padding: 60px 0;
         }
+
         @include sectionPadding($vertical: 60px,
-        $horizontal: 16px);
+            $horizontal: 16px);
         background-size: contain;
         background-image: none;
+
         .section-title {
             padding: 0 5px;
+
             h3 {
                 @include font(16px,
-                #000,
-                500,
-                24px);
+                    #000,
+                    500,
+                    24px);
             }
+
             p {
                 @include font(15px,
-                #3e3e3e,
-                400,
-                22.5px);
+                    #3e3e3e,
+                    400,
+                    22.5px);
                 margin-bottom: 60px;
             }
         }
+
         .blog-news__cards {
             grid-template-columns: 1fr;
             grid-column-gap: 0;
+
             .card--item {
                 .card--body {
                     padding: 26px 16px 20px 16px;
+
                     .card--title {
                         @include font(16px,
-                        $blueColor,
-                        500,
-                        24px);
+                            $blueColor,
+                            500,
+                            24px);
                         max-height: 24px;
                     }
+
                     .go-to {
                         text-align: center;
+
                         .go-to-btn {
                             margin: 0 auto;
                         }
@@ -221,35 +228,45 @@
                 }
             }
         }
+
         .more-btn-box {
             margin-top: 60px;
+
             .more-btn {
                 padding: 10px 48px;
             }
         }
+
         .videos-slider {
             padding: 90px 0 0 0;
+
             &__title {
                 width: 100%;
                 padding-bottom: 90px;
             }
+
             .video__item {
                 padding: 30px 0;
+
                 .video--card {
                     &-body {
                         padding: 17px 26px 10px 26px;
                     }
                 }
             }
+
             .owl-dots {
                 display: block;
+
                 .owl-dot span {
                     background-color: #a9c6e8;
                 }
+
                 .owl-dot.active span {
                     background-color: $blueColor;
                 }
             }
+
             .owl-theme .owl-nav {
                 top: -45px;
             }
@@ -260,67 +277,72 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .main-section {
         padding: 65px 2%;
+
         &__img {
             margin: 0;
             padding: 0;
         }
+
         &__content {
             h1 {
                 font-size: 35px;
                 line-height: 50px;
             }
         }
+
         &__buttons {
             .button {
                 margin-top: 30px;
                 padding: 10px 35px;
+
                 &-blue-bg {
                     margin-right: 15px;
                 }
             }
         }
     }
+
     .recommended-books {
         .books-slider {
             padding: 20px 2% 65px 2%;
+
             &__content {
                 .books__item {
                     padding: 0;
-                    >div {
-                        .book-image {
-                            img {
-                                box-shadow: none;
-                                object-fit: contain;
-                            }
-                        }
-                    }
                 }
             }
+
             .owl-theme .owl-nav {
                 bottom: 40px;
             }
         }
     }
+
     .author-quote {
         padding: 80px 2%;
+
         .quote__content {
             .quote--text-container {
                 padding-left: 30px;
                 top: 0px;
+
                 .author-des-and-social-icons {
                     flex-direction: column;
                     align-items: flex-start;
+
                     .social-icons {
                         margin: 30px 0;
                     }
                 }
             }
+
             .quote--icon {
                 left: 2%;
                 top: 50px;
             }
         }
     }
+
     .videos-slider {
         .video__item {
             .video--card {
@@ -330,10 +352,12 @@
             }
         }
     }
+
     .blog-news {
         &__cards {
             grid-template-columns: 1fr 1fr !important;
         }
+
         &.home-page-blogs {
             padding: 54px 2%;
         }
@@ -353,6 +377,7 @@
         .mobile-menu {
             display: none;
         }
+
         .mobile-menu__container {
             display: none !important;
         }
@@ -363,12 +388,15 @@
     .author-quote .quote__content .quote--text-container .author-des-and-social-icons {
         flex-direction: column;
         align-items: flex-start;
+
         .social-icons {
             margin: 30px 0;
         }
     }
+
     .video__item .video--card-body {
         padding: 15px 25px;
+
         .video--card-title {
             font-size: 16px;
         }
@@ -378,32 +406,34 @@
 @media screen and (min-width: 993px) and (max-width: 1340px) {
     .main-section {
         padding: 65px 4%;
+
         &__img {
             padding: 0 0 0 75px;
             margin-right: 50px;
         }
     }
+
     .recommended-books .books-slider {
         padding: 20px 4% 130px 4%;
     }
+
     .author-quote {
         padding: 75px 4%;
+
         .quote__content {
             .quote--text-container {
                 top: 90px;
                 padding-left: 20px;
             }
+
             .quote--icon {
                 top: 60px;
                 left: 4%;
             }
         }
     }
+
     .blog-news.home-page-blogs {
         padding: 53px 4%;
-    }
-    .books__item>div .book-image img {
-        box-shadow: none;
-        object-fit: contain;
     }
 }
