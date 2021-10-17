@@ -1,0 +1,22 @@
+@media (max-width: 576px) {
+  .main-section {
+    background-image: url("/assets/images/bg-images/home-page-bg-mobile.png");
+    padding: 30px 0;
+  }
+  .main-section__img {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header .desktop-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 993px) {
+  .header .mobile-menu {
+    display: none;
+  }
+  .header .mobile-menu__container {
+    display: none !important;
+  }
+}

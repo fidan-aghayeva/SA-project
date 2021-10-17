@@ -2,7 +2,7 @@
 .card--item {
     @include transition15;
     background-color: #fff;
-    border: 1px solid #D7D9DA;
+    border: 1px solid #d7d9da;
     border-radius: 12px;
     margin-bottom: 30px;
     .card--header {
@@ -54,7 +54,7 @@
             height: 48px;
             border-radius: 50%;
             background-color: transparent;
-            border: 1px solid #D7D9DA;
+            border: 1px solid #d7d9da;
             img {
                 content: url('../../../assets/images/icons/gray-arrow-right.png');
             }
@@ -70,5 +70,11 @@
                 content: url('../../../assets/images/icons/white-arrow-right.png');
             }
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .card--item .card--body .go-to {
+        text-align: center;
     }
 }

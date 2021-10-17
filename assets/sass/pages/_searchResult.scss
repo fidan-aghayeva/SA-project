@@ -14,8 +14,8 @@
                     width: 496px;
                     height: 56px;
                     border-radius: 28px;
-                    background-color: #FFF8F8;
-                    border: 1px solid #FFBEC2;
+                    background-color: #fff8f8;
+                    border: 1px solid #ffbec2;
                     text-indent: 16px;
                     margin-right: 16px;
                 }
@@ -45,6 +45,8 @@
                 padding-bottom: 60px;
             }
             .finded--blogs {
+                display: grid;
+                grid-template-columns: 1fr;
                 .card--item {
                     @include flexContainer(flex, space-between, row);
                     .card--header {
@@ -70,7 +72,7 @@
             }
             .finded--videos {
                 .video__item {
-                    border: 1px solid #D7D9DA;
+                    border: 1px solid #d7d9da;
                     border-radius: 12px;
                     overflow: hidden;
                     .video--card {
@@ -79,14 +81,22 @@
                         min-height: 230px;
                         .fancy-box {
                             height: 230px;
+                            >div {
+                                position: relative;
+                                height: 100%;
+                                span {
+                                    @include flexContainer(flex, center, row);
+                                    align-items: center;
+                                    border: 1px solid #fff;
+                                    font-size: 25px;
+                                    color: #fff;
+                                    background-color: transparent;
+                                }
+                            }
                             img {
                                 width: 288px;
                                 height: 230px;
                                 border-radius: 12px 0 0 12px;
-                            }
-                            .play-icon {
-                                left: 32%;
-                                top: 25%;
                             }
                         }
                         &-body {
@@ -102,7 +112,7 @@
                                 height: 48px;
                                 border-radius: 50%;
                                 background-color: transparent;
-                                border: 1px solid #D7D9DA;
+                                border: 1px solid #d7d9da;
                                 img {
                                     content: url('../../../assets/images/icons/gray-arrow-right.png');
                                 }
@@ -141,13 +151,116 @@
                 width: 48px;
                 height: 48px;
                 border-radius: 50%;
-                border: 0.5px solid #B3B3B3;
+                border: 0.5px solid #b3b3b3;
                 background-color: #fff;
                 margin-right: 16px;
                 &:hover {
                     background-color: $pinkColor;
                     border: 0.5px solid $pinkColor;
                     color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .search-result {
+        padding: 30px 0 120px 0;
+        &__container {
+            &--title {
+                @include font(18px,
+                #000,
+                400,
+                27px);
+                margin-bottom: 30px;
+            }
+            .search-box {
+                form {
+                    input {
+                        margin-right: 0px;
+                    }
+                    .search-icon {
+                        transform: translateX(-45px);
+                        padding: 0 15px;
+                    }
+                }
+            }
+            .search-keyword--box {
+                @include font(16px,
+                #000,
+                500,
+                24px);
+            }
+        }
+    }
+    .search-result .finded-results__container>div {
+        padding-bottom: 30px;
+    }
+    .search-result .finded-results__container .finded--blogs {
+        grid-template-columns: 1fr !important;
+    }
+    .search-result .finded-results__container .finded--videos .video__item {
+        border-radius: 0px;
+        border: none;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.16);
+        .video--card {
+            flex-direction: column;
+            &-body {
+                padding: 18px 26px;
+                .go-to-btn {
+                    display: none;
+                }
+            }
+            .fancy-box {
+                display: flex;
+                width: 100%;
+                >div {
+                    width: 100%;
+                    .play-icon {
+                        span {
+                            width: 49px;
+                            height: 49px;
+                            background-color: #fff;
+                            font-size: 22px;
+                            color: $blueColor;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+    .search-result__pagination a:not(:last-of-type) {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .search-result .finded-results__container .finded--blogs {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        .card--item {
+            flex-direction: column;
+            .card--body {
+                padding: 26px 16px;
+                flex-direction: column;
+                >div:first-child {
+                    padding-right: 0;
+                }
+            }
+            .card--header {
+                width: 100%;
+                .card--image {
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }

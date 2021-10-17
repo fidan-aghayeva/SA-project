@@ -1,4 +1,3 @@
 1.mobil menu butun ekrani tutmalidir
 2.mobilde search hissesi
-8.author quote-u daha optimal yaz
 9.diger layiheler ve oxsar bloqlar mobilde slider olmalidir

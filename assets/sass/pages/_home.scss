@@ -1,9 +1,13 @@
 .main-section {
-    @include sectionPadding($vertical: 130px);
     @include fullBgImage;
     @include flexContainer(flex, center, row);
+    padding: 130px 0;
     background-image: url('../../../assets/images/bg-images/home-page-bg.svg');
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
         h1 {
             @include font(42px,
             $blueColor,
@@ -47,10 +51,9 @@
         }
     }
     &__img {
-        padding: 0 0 0 140px;
         margin-right: 100px;
         img {
-            width: 392px;
+            width: 100%;
             height: 476px;
         }
     }
@@ -58,6 +61,7 @@
 
 // recommended books section
 .recommended-books {
+    padding: 60px 0 120px 0;
     position: relative;
     .section-bg-image {
         position: absolute;
@@ -70,9 +74,9 @@
         }
     }
     .books-slider {
-        padding: 20px 8% 130px 8%;
         &__title {
             width: 50%;
+            padding-bottom: 40px;
             span {
                 @include flexContainer(inline-flex,
                 flex-start,
@@ -93,14 +97,12 @@
                 padding-left: 35px;
             }
         }
-        &__content {
-            .books__item {
-                margin: 30px;
-            }
+        .owl-carousel.owl-carousel-books {
+            box-shadow: -10px 4px 30px rgba(0, 0, 0, 0.16);
         }
         .owl-theme .owl-nav {
             position: absolute;
-            bottom: 48px;
+            bottom: 20px;
             right: 100px;
             margin-top: 0;
         }
@@ -109,53 +111,55 @@
 
 // author quote section
 .author-quote {
-    @include sectionPadding($vertical: 160px);
-    position: relative;
-    min-height: 600px;
+    padding: 60px 0 0 0;
     background-color: $blueColor;
     color: #fff;
     .quote__content {
-        .quote--icon {
-            position: absolute;
-            top: 120px;
-            z-index: 1;
-            left: 8%;
-        }
+        position: relative;
         .quote--text-container {
-            position: absolute;
-            top: 155px;
-            z-index: 2;
-            width: 55%;
-            padding-left: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
             .quote--text {
                 @include font(18px,
                 #fff,
                 400,
                 32px);
+                background-image: url('/assets/images/icons/quote-icon.png');
+                background-repeat: no-repeat;
+                padding: 25px 0 0 45px;
             }
-            .author-des-and-social-icons {
-                @include flexContainer(flex,
-                space-between,
-                row);
-                padding-top: 40px;
-                .author-des {
-                    @include flexContainer(flex,
-                    flex-start,
-                    column);
-                    align-items: flex-start;
-                    .author-name {
-                        @include font(18px,
-                        #fff,
-                        bold,
-                        28px);
-                    }
-                    .author-job {
-                        @include font(16px,
-                        #c2c2e2,
-                        400,
-                        26px);
-                    }
-                }
+        }
+        .author-image {
+            img {
+                width: 100%;
+                height: 550px;
+            }
+        }
+    }
+    .quote__content .quote--text-container .author-des-and-social-icons,
+    .quote__content-mobile .quote--text-container-mobile .author-des-and-social-icons {
+        @include flexContainer(flex,
+        space-between,
+        row);
+        padding: 40px 0 0 45px;
+        .author-des {
+            @include flexContainer(flex,
+            flex-start,
+            column);
+            align-items: flex-start;
+            .author-name {
+                @include font(18px,
+                #fff,
+                bold,
+                28px);
+            }
+            .author-job {
+                @include font(16px,
+                #c2c2e2,
+                400,
+                26px);
             }
         }
         .social-icons {
@@ -177,12 +181,24 @@
                 }
             }
         }
+    }
+    .quote__content-mobile .quote--text-container-mobile {
+        display: none;
+        .author-des-and-social-icons {
+            flex-direction: column;
+            align-self: flex-start;
+            justify-content: flex-start;
+            .social-icons {
+                width: 100%;
+                i {
+                    margin: 30px 0;
+                }
+            }
+        }
         .author-image {
-            position: absolute;
-            bottom: 6px;
-            right: 8%;
-            width: 350px;
-            height: 550px;
+            img {
+                height: 250px;
+            }
         }
     }
 }
@@ -215,7 +231,7 @@
         }
     }
     .video__item {
-        margin: 24px 0;
+        margin: 30px 0;
     }
     .owl-theme .owl-nav {
         position: absolute;
