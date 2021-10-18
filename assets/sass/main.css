@@ -567,6 +567,17 @@ button:focus {
   display: block !important;
 }
 
+.header .mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+  padding: 15px;
+}
+
 .header .mobile-menu__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,8 +592,8 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   background-color: #fff;
-  padding: 15px;
 }
 
 .header .mobile-menu__header > div {
@@ -602,13 +613,49 @@ button:focus {
   align-items: center;
 }
 
-.header .mobile-menu__container {
+.header .mobile-menu__header > div.mobile-menu__logo {
+  margin-right: 20px;
+}
+
+.header .mobile-menu__header .mobile-menu__search-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
+  right: 16px;
+  top: 9px;
+}
+
+.header .mobile-menu__header .mobile-menu__search-container > img {
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.header .mobile-menu__header .mobile-menu__search-container > div {
   display: none;
+  position: relative;
+}
+
+.header .mobile-menu__header .mobile-menu__search-container > div input {
+  width: 100%;
+  height: 48px;
+  padding: 14px 16px;
+  background-color: #fff8f8;
+  border: none;
+  border-radius: 12px;
+}
+
+.header .mobile-menu__header .mobile-menu__search-container > div a {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+}
+
+.header .mobile-menu__container {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
   background-color: #4D7FBA;
 }
 
@@ -616,13 +663,30 @@ button:focus {
   width: 100%;
 }
 
+.header .mobile-menu__container nav .mobile-menu__list {
+  padding-top: 30px;
+  margin-bottom: 0px;
+}
+
+.header .mobile-menu__container nav .mobile-menu__list-item {
+  padding: 10px 16px;
+  color: #fff;
+}
+
+.header .mobile-menu__container nav .mobile-menu__list-item a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 .header .mobile-menu__container.show-mobile-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -660,6 +724,10 @@ button:focus {
   padding: 15px;
   border-top: 0.5px solid #ffffff;
   border-bottom: 0.5px solid #ffffff;
+}
+
+.header .mobile-menu__container .lang-menu__list {
+  margin-bottom: 0px;
 }
 
 .header .mobile-menu__container .lang-menu__list-item {
@@ -702,6 +770,8 @@ button:focus {
 }
 
 .header .mobile-menu__container .social-icons {
+  position: absolute;
+  bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,7 +786,6 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding-bottom: 30px;
 }
 
 .header .mobile-menu__container .social-icons div i {
@@ -741,16 +810,16 @@ button:focus {
   color: #fff;
 }
 
-.header .mobile-menu__list {
+.header .mobile-menu__container__list {
   padding: 30px 15px;
 }
 
-.header .mobile-menu__list-item {
+.header .mobile-menu__container__list-item {
   margin-bottom: 30px;
 }
 
-.header .mobile-menu__list-item a,
-.header .mobile-menu__list-item span {
+.header .mobile-menu__container__list-item a,
+.header .mobile-menu__container__list-item span {
   font-size: 16px;
   color: #fff;
   font-weight: normal;
@@ -758,16 +827,16 @@ button:focus {
   letter-spacing: 1px;
 }
 
-.header .mobile-menu__list-item ul {
+.header .mobile-menu__container__list-item ul {
   display: none;
   padding: 20px 0 0 20px;
 }
 
-.header .mobile-menu__list-item ul li {
+.header .mobile-menu__container__list-item ul li {
   margin-bottom: 20px;
 }
 
-.header .mobile-menu__list-item ul.active {
+.header .mobile-menu__container__list-item ul.active {
   display: block;
 }
 
@@ -3916,9 +3985,6 @@ button:focus {
 @media screen and (min-width: 993px) {
   .header .mobile-menu {
     display: none;
-  }
-  .header .mobile-menu__container {
-    display: none !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

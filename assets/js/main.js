@@ -2,11 +2,11 @@
  * @description      : 
  * @author           : hp
  * @group            : 
- * @created          : 06/09/2021 - 00:17:11
+ * @created          : 18/10/2021 - 22:37:51
  * 
  * MODIFICATION LOG
  * - Version         : 1.0.0
- * - Date            : 06/09/2021
+ * - Date            : 18/10/2021
  * - Author          : hp
  * - Modification    : 
  **/
@@ -53,14 +53,30 @@ const menuCloseButton = document.querySelector(
     '.header .mobile-menu__container .close-button'
 );
 
+const mobileMenuSearchIcon = document.querySelector(
+    '.mobile-menu__search-container>img'
+);
+const mobileMenuSearchBox = document.querySelector(
+    '.mobile-menu__search-container>div'
+);
 mobileMenuIcon.addEventListener('click', function() {
     mobileMenuContainer.classList.add('show-mobile-menu');
+    document.querySelector('body').style.overflowY = 'hidden';
 });
 
 menuCloseButton.addEventListener('click', function() {
     mobileMenuContainer.classList.remove('show-mobile-menu');
+    document.querySelector('body').style.overflowY = 'auto';
 });
 
+mobileMenuSearchIcon.addEventListener('click', () => {
+    mobileMenuSearchIcon.style.display = 'none';
+    document.querySelector(
+            '.header .mobile-menu__header .mobile-menu__logo'
+        ).style.display =
+        'none';
+    mobileMenuSearchBox.style.display = 'block';
+});
 // about me menu
 
 function dropdownMenu(item, e, arrowIcon) {

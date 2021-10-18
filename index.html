@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/plugins/fancy-box/jquery.fancybox.min.css" />
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>SA</title>
 </head>
 
@@ -92,48 +94,62 @@
               <img src="./assets/images/icons/bar-icon.png" alt="" />
             </div>
             <div class="mobile-menu__logo">
-              <img src="./assets/images/header-logo.svg" alt="" />
+              <a href="./index.html">
+                <img src="./assets/images/header-logo.svg" alt="" />
+              </a>
             </div>
             <div class="mobile-menu__search">
               <form action="">
-                <div class="desktop-menu__search-container">
+                <div class="mobile-menu__search-container">
                   <img
                     src="./assets/images//icons/blue-search-icon.png"
                     alt=""
                   />
-                  <!-- <input type="search" name="mobile-search" id="header-search" placeholder="Axtar" /> -->
+                  <div>
+                    <input
+                      type="search"
+                      name="header-search"
+                      id="header-search"
+                      placeholder="Axtar"
+                    />
+                    <a href="">
+                      <img
+                        src="./assets/images/icons/blue-search-icon.png"
+                        alt="search-icon"
+                      />
+                    </a>
+                  </div>
                 </div>
               </form>
             </div>
           </div>
-        </div>
-        <div class="mobile-menu__container">
-          <div class="close-button">
-            <img src="./assets/images/icons/close-menu-icon.png" alt="" />
-          </div>
-          <div class="lang-menu--mobile">
-            <ul class="lang-menu__list">
-              <li class="lang-menu__list-item selected-lang">AZ</li>
-              <li class="lang-menu__list-item">EN</li>
-              <li class="lang-menu__list-item">RU</li>
-            </ul>
-          </div>
-          <nav>
-            <ul class="mobile-menu__list">
-              <li class="mobile-menu__list-item">
-                <a href="./projects.html">Layihələrim</a>
-              </li>
-              <li class="mobile-menu__list-item">
-                <a href="./books.html">Kitablar</a>
-              </li>
-              <li class="mobile-menu__list-item">
-                <a href="./interviews.html">Müsahibələrim</a>
-              </li>
-              <li class="mobile-menu__list-item">
-                <a href="./videos.html">Videolar</a>
-              </li>
-              <li class="mobile-menu__list-item mobile-dropdown-container">
-                <span>Haqqımda <i class="fa fa-angle-down"></i></span>
+          <div class="mobile-menu__container" data-aos="fade-right">
+            <div class="close-button">
+              <img src="./assets/images/icons/close-menu-icon.png" alt="" />
+            </div>
+            <div class="lang-menu--mobile">
+              <ul class="lang-menu__list">
+                <li class="lang-menu__list-item selected-lang">AZ</li>
+                <li class="lang-menu__list-item">EN</li>
+                <li class="lang-menu__list-item">RU</li>
+              </ul>
+            </div>
+            <nav>
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__list-item">
+                  <a href="./projects.html">Layihələrim</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                  <a href="./books.html">Kitablar</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                  <a href="./interviews.html">Müsahibələrim</a>
+                </li>
+                <li class="mobile-menu__list-item">
+                  <a href="./videos.html">Videolar</a>
+                </li>
+                <li class="mobile-menu__list-item mobile-dropdown-container">
+                  <span>Haqqımda <i class="fa fa-angle-down"></i></span>
                     <ul class="mobile-dropdown">
                         <li class="mobile-menu__list-item">
                             <a href="./about.html">Özüm haqqımda</a>
@@ -169,6 +185,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- main section start -->
@@ -646,6 +663,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="./assets/plugins/fancy-box/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/owl.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
