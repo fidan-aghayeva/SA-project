@@ -133,12 +133,12 @@ button:focus {
     margin-right: 20px;
     overflow: hidden;
     span {
-        content: url('./assets/images/icons/blue-prev-arrow.png');
+        content: url('../../../assets/images/icons/blue-prev-arrow.png');
     }
     &:hover {
         background-color: $blueColor;
         span {
-            content: url('./assets/images/icons/slider-white-prev-arrow.png');
+            content: url('../../../assets/images/icons/slider-white-prev-arrow.png');
         }
     }
 }
@@ -157,12 +157,12 @@ button:focus {
     background-color: #fff;
     overflow: hidden;
     span {
-        content: url('./assets/images/icons/blue-next-arrow.png');
+        content: url('../../../assets/images/icons/blue-next-arrow.png');
     }
     &:hover {
         background-color: $blueColor;
         span {
-            content: url('./assets/images/icons/slider-white-next-arrow.png');
+            content: url('../../../assets/images/icons/slider-white-next-arrow.png');
         }
     }
 }
