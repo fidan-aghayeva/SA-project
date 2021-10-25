@@ -56,7 +56,7 @@
             background-color: transparent;
             border: 1px solid #d7d9da;
             img {
-                content: url('../../../assets/images/icons/gray-arrow-right.png');
+                content: url('./assets/images/icons/gray-arrow-right.png');
             }
         }
     }
@@ -67,7 +67,7 @@
             background-color: $pinkColor !important;
             border: 1px solid transparent;
             img {
-                content: url('../../../assets/images/icons/white-arrow-right.png');
+                content: url('./assets/images/icons/white-arrow-right.png');
             }
         }
     }

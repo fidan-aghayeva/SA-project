@@ -1,7 +1,7 @@
 .about-page {
     &__overview {
         @include fullBgImage;
-        background-image: url('/assets/images/bg-images/about-bg.png');
+        background-image: url('./assets/images/bg-images/about-bg.png');
         padding-top: 60px;
         &--content {
             .overview-title {

@@ -114,14 +114,14 @@
                                 background-color: transparent;
                                 border: 1px solid #d7d9da;
                                 img {
-                                    content: url('../../../assets/images/icons/gray-arrow-right.png');
+                                    content: url('./assets/images/icons/gray-arrow-right.png');
                                 }
                                 &:hover {
                                     background-color: $pinkColor;
                                     color: #fff;
                                     border: 1px solid $pinkColor;
                                     img {
-                                        content: url('../../../assets/images/icons/white-arrow-right.png');
+                                        content: url('./assets/images/icons/white-arrow-right.png');
                                     }
                                 }
                             }

@@ -2,7 +2,7 @@
     padding: 60px 0 120px 0;
     &__container {
         @include fullBgImage;
-        background-image: url('/assets/images/cntc-page-element.svg');
+        background-image: url('./assets/images/cntc-page-element.svg');
         padding: 73px;
         .page-content {
             padding: 60px 105px 95px 105px;
