@@ -2070,6 +2070,12 @@ button:focus {
   margin-bottom: 70px;
 }
 
+@media (max-width: 576px) {
+  .blog-news {
+    padding: 60px 0 120px 0;
+  }
+}
+
 .blog-details {
   padding: 60px 8% 120px 8%;
 }
