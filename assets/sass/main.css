@@ -214,7 +214,7 @@ button:focus {
 .recommended-books .books-slider .owl-theme .owl-nav .owl-prev span,
 .videos-slider .owl-theme .owl-nav .owl-prev span,
 .blog-details .similar-blogs .owl-theme .owl-nav .owl-prev span {
-  content: url("../../../assets/images/icons/blue-prev-arrow.png");
+  content: url("../../assets/images/icons/blue-prev-arrow.png");
 }
 
 .recommended-books .books-slider .owl-theme .owl-nav .owl-prev:hover,
@@ -226,7 +226,7 @@ button:focus {
 .recommended-books .books-slider .owl-theme .owl-nav .owl-prev:hover span,
 .videos-slider .owl-theme .owl-nav .owl-prev:hover span,
 .blog-details .similar-blogs .owl-theme .owl-nav .owl-prev:hover span {
-  content: url("../../../assets/images/icons/slider-white-prev-arrow.png");
+  content: url("../../assets/images/icons/slider-white-prev-arrow.png");
 }
 
 .recommended-books .books-slider .owl-theme .owl-nav .owl-next,
@@ -258,7 +258,7 @@ button:focus {
 .recommended-books .books-slider .owl-theme .owl-nav .owl-next span,
 .videos-slider .owl-theme .owl-nav .owl-next span,
 .blog-details .similar-blogs .owl-theme .owl-nav .owl-next span {
-  content: url("../../../assets/images/icons/blue-next-arrow.png");
+  content: url("../../assets/images/icons/blue-next-arrow.png");
 }
 
 .recommended-books .books-slider .owl-theme .owl-nav .owl-next:hover,
@@ -270,7 +270,7 @@ button:focus {
 .recommended-books .books-slider .owl-theme .owl-nav .owl-next:hover span,
 .videos-slider .owl-theme .owl-nav .owl-next:hover span,
 .blog-details .similar-blogs .owl-theme .owl-nav .owl-next:hover span {
-  content: url("../../../assets/images/icons/slider-white-next-arrow.png");
+  content: url("../../assets/images/icons/slider-white-next-arrow.png");
 }
 
 .go-to-top {
@@ -1122,7 +1122,7 @@ button:focus {
 }
 
 .card--item .card--body .go-to-btn img {
-  content: url("../../../assets/images/icons/gray-arrow-right.png");
+  content: url("../../assets/images/icons/gray-arrow-right.png");
 }
 
 .card--item:hover {
@@ -1137,7 +1137,7 @@ button:focus {
 }
 
 .card--item:hover .go-to-btn img {
-  content: url("../../../assets/images/icons/white-arrow-right.png");
+  content: url("../../assets/images/icons/white-arrow-right.png");
 }
 
 @media (max-width: 576px) {
@@ -1641,7 +1641,7 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 130px 0;
-  background-image: url("../../../assets/images/bg-images/home-page-bg.svg");
+  background-image: url("../../assets/images/bg-images/home-page-bg.svg");
 }
 
 .main-section__content {
@@ -1810,7 +1810,7 @@ button:focus {
   color: #fff;
   font-weight: 400;
   line-height: 32px;
-  background-image: url("../../../assets/images/icons/quote-icon.png");
+  background-image: url("../../assets/images/icons/quote-icon.png");
   background-repeat: no-repeat;
   padding: 25px 0 0 45px;
 }
@@ -2026,7 +2026,7 @@ button:focus {
 }
 
 .blog-news {
-  padding: 90px 0;
+  padding: 90px 8%;
 }
 
 .blog-news.home-page-blogs {
@@ -2034,7 +2034,7 @@ button:focus {
   background-size: contain;
   background-position: 100% 60%;
   background-repeat: no-repeat;
-  background-image: url("../../../assets/images/bg-images/section-bg.svg");
+  background-image: url("../../assets/images/bg-images/section-bg.svg");
 }
 
 .blog-news .section-title {
@@ -2722,7 +2722,7 @@ button:focus {
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../../../assets/images/cntc-page-element.svg");
+  background-image: url("../../assets/images/cntc-page-element.svg");
   padding: 73px;
 }
 
@@ -2973,7 +2973,7 @@ button:focus {
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../../../assets/images/bg-images/404page-bg.png");
+  background-image: url("../../assets/images/bg-images/404page-bg.png");
   padding-bottom: 234px;
 }
 
@@ -3057,7 +3057,7 @@ button:focus {
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../../../assets/images/bg-images/404page-bg-mobile.png");
+    background-image: url("../../assets/images/bg-images/404page-bg-mobile.png");
     padding: 50px 24px 200px 24px;
   }
   .error-page div p {
@@ -3302,7 +3302,7 @@ button:focus {
 }
 
 .search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn img {
-  content: url("../../../assets/images/icons/gray-arrow-right.png");
+  content: url("../../assets/images/icons/gray-arrow-right.png");
 }
 
 .search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn:hover {
@@ -3312,7 +3312,7 @@ button:focus {
 }
 
 .search-result .finded-results__container .finded--videos .video__item .video--card-body .go-to-btn:hover img {
-  content: url("../../../assets/images/icons/white-arrow-right.png");
+  content: url("../../assets/images/icons/white-arrow-right.png");
 }
 
 .search-result__pagination {
@@ -3474,7 +3474,7 @@ button:focus {
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../../../assets/images/bg-images/about-bg.png");
+  background-image: url("../../assets/images/bg-images/about-bg.png");
   padding-top: 60px;
 }
 
@@ -3923,7 +3923,7 @@ button:focus {
 
 @media (max-width: 767px) {
   .main-section {
-    background-image: url("../../../assets/images/bg-images/home-page-bg-mobile.png");
+    background-image: url("../../assets/images/bg-images/home-page-bg-mobile.png");
     padding: 30px 0 100px 0;
   }
   .main-section__content h1 {

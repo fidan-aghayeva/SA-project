@@ -1,6 +1,6 @@
 .error-page {
     @include fullBgImage;
-    background-image: url('../../../assets/images/bg-images/404page-bg.png');
+    background-image: url('../../assets/images/bg-images/404page-bg.png');
     padding-bottom: 234px;
     div {
         @include flexContainer(flex,
@@ -76,7 +76,7 @@
         padding-bottom: 0;
         div {
             @include fullBgImage;
-            background-image: url('../../../assets/images/bg-images/404page-bg-mobile.png');
+            background-image: url('../../assets/images/bg-images/404page-bg-mobile.png');
             padding: 50px 24px 200px 24px;
             p {
                 width: 100%;
