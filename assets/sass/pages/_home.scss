@@ -2,7 +2,7 @@
     @include fullBgImage;
     @include flexContainer(flex, center, row);
     padding: 130px 0;
-    background-image: url('../../../assets/images/bg-images/home-page-bg.svg');
+    background-image: url('/assets/images/bg-images/home-page-bg.svg');
     &__content {
         display: flex;
         flex-direction: column;

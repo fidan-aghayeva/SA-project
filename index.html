@@ -16,7 +16,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <!-- aos library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./assets/plugins/aos/aos.css" rel="stylesheet" />
     <title>SA</title>
 </head>
 
@@ -123,7 +123,7 @@
               </form>
             </div>
           </div>
-          <div class="mobile-menu__container" data-aos="fade-right">
+          <div class="mobile-menu__container">
             <div class="close-button">
               <img src="./assets/images/icons/close-menu-icon.png" alt="" />
             </div>
@@ -193,235 +193,294 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-xl-7 col-lg-7 col-md-7 col-12 order-xl-1 order-lg-1 order-md-1 order-2">
-                    <div class="main-section__content">
+                    <div class="main-section__content" data-aos="zoom-out">
                         <h1>Design driven development of your web product</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
                         <div class="main-section__buttons">
-                            <a href="" class="button button-blue-bg">Əlaqə</a>
-                            <a href="" class="button button-blue-border">Haqqımda</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5 col-md-5 col-12 order-xl-2 order-lg-2 order-md-2 order-1">
-                    <div class="main-section__img">
-                        <img src="./assets/images/client-photos/home-page-image1.png" alt="home-page-image1" />
-                    </div>
-                </div>
+                            <a href="./contact.html" class="button button-blue-bg">Əlaqə</a>
+                            <a href="./about.html" class="button button-blue-border">Haqqımda</a
+                >
+              </div>
             </div>
+          </div>
+          <div
+            class="col-xl-5 col-lg-5 col-md-5 col-12 order-xl-2 order-lg-2 order-md-2 order-1"
+          >
+            <div class="main-section__img">
+              <img
+                src="./assets/images/client-photos/home-page-image1.png"
+                alt="home-page-image1"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- recommended books section start -->
 
     <section class="recommended-books">
-        <div class="container">
-            <div class="books-slider">
-                <div class="books-slider__title">
-                    <span>
+      <div class="container">
+        <div class="books-slider">
+          <div class="books-slider__title">
+            <span>
               <img src="./assets/images/icons/red-circle.png" alt="" />
               Tövsiyə kitablar
             </span>
-                    <p class="books-slider__title--text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <p class="books-slider__title--text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div
+            class="owl-carousel owl-carousel-books owl-theme custom-arrows books-slider__content"
+          >
+            <div class="books__item">
+              <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="book-image">
+                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                  <div class="book-description">
+                    <span class="book-name">
+                      <span>
+                        Anna Karenina
+                      </span>
+                    </span>
+                    <p class="book-des-content">
+                      Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir
+                      evin, bir ailə­nin problemindən başlayır və bütün
+                      Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
+                      <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir
+                      qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi,
+                      sərvəti, adı. Amma o heç nəyə bax­madan bunların
+                      hamısından imtina edir! O özünü eşq girdabına atır və
+                      bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı
+                      çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun
+                      ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə
+                      oxucu ona nifrət edir.
                     </p>
+                    <span class="book-author">Müəllif - Leo Tolstoy</span>
+                  </div>
                 </div>
-                <div class="owl-carousel owl-carousel-books owl-theme custom-arrows books-slider__content">
-                    <div class="books__item">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-4 col-12">
-                                <div class="book-image">
-                                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-12">
-                                <div class="book-description">
-                                    <span class="book-name">
-                      <span>
-                        Anna Karenina
-                      </span>
-                                    </span>
-                                    <p class="book-des-content">
-                                        Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir evin, bir ailə­nin problemindən başlayır və bütün Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
-                                        <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi, sərvəti, adı. Amma o heç nəyə bax­madan bunların hamısından imtina edir! O özünü eşq girdabına atır
-                                        və bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə oxucu ona nifrət edir.
-                                    </p>
-                                    <span class="book-author">Müəllif - Leo Tolstoy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="books__item">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-4 col-12">
-                                <div class="book-image">
-                                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-12">
-                                <div class="book-description">
-                                    <span class="book-name">
-                      <span>
-                        Anna Karenina
-                      </span>
-                                    </span>
-                                    <p class="book-des-content">
-                                        Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir evin, bir ailə­nin problemindən başlayır və bütün Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
-                                        <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi, sərvəti, adı. Amma o heç nəyə bax­madan bunların hamısından imtina edir! O özünü eşq girdabına atır
-                                        və bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə oxucu ona nifrət edir.
-                                    </p>
-                                    <span class="book-author">Müəllif - Leo Tolstoy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="books__item">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-4 col-12">
-                                <div class="book-image">
-                                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-12">
-                                <div class="book-description">
-                                    <span class="book-name">
-                      <span>
-                        Anna Karenina
-                      </span>
-                                    </span>
-                                    <p class="book-des-content">
-                                        Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir evin, bir ailə­nin problemindən başlayır və bütün Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
-                                        <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi, sərvəti, adı. Amma o heç nəyə bax­madan bunların hamısından imtina edir! O özünü eşq girdabına atır
-                                        və bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə oxucu ona nifrət edir.
-                                    </p>
-                                    <span class="book-author">Müəllif - Leo Tolstoy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="books__item">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-4 col-12">
-                                <div class="book-image">
-                                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-12">
-                                <div class="book-description">
-                                    <span class="book-name">
-                      <span>
-                        Anna Karenina
-                      </span>
-                                    </span>
-                                    <p class="book-des-content">
-                                        Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir evin, bir ailə­nin problemindən başlayır və bütün Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
-                                        <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi, sərvəti, adı. Amma o heç nəyə bax­madan bunların hamısından imtina edir! O özünü eşq girdabına atır
-                                        və bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə oxucu ona nifrət edir.
-                                    </p>
-                                    <span class="book-author">Müəllif - Leo Tolstoy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="books__item">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-4 col-12">
-                                <div class="book-image">
-                                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-12">
-                                <div class="book-description">
-                                    <span class="book-name">
-                      <span>
-                        Anna Karenina
-                      </span>
-                                    </span>
-                                    <p class="book-des-content">
-                                        Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir evin, bir ailə­nin problemindən başlayır və bütün Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
-                                        <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi, sərvəti, adı. Amma o heç nəyə bax­madan bunların hamısından imtina edir! O özünü eşq girdabına atır
-                                        və bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə oxucu ona nifrət edir.
-                                    </p>
-                                    <span class="book-author">Müəllif - Leo Tolstoy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="books__item">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-4 col-12">
-                                <div class="book-image">
-                                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-12">
-                                <div class="book-description">
-                                    <span class="book-name">
-                      <span>
-                        Anna Karenina
-                      </span>
-                                    </span>
-                                    <p class="book-des-content">
-                                        Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir evin, bir ailə­nin problemindən başlayır və bütün Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
-                                        <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi, sərvəti, adı. Amma o heç nəyə bax­madan bunların hamısından imtina edir! O özünü eşq girdabına atır
-                                        və bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə oxucu ona nifrət edir.
-                                    </p>
-                                    <span class="book-author">Müəllif - Leo Tolstoy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="books__item">
+              <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="book-image">
+                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                  <div class="book-description">
+                    <span class="book-name">
+                      <span>
+                        Anna Karenina
+                      </span>
+                    </span>
+                    <p class="book-des-content">
+                      Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir
+                      evin, bir ailə­nin problemindən başlayır və bütün
+                      Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
+                      <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir
+                      qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi,
+                      sərvəti, adı. Amma o heç nəyə bax­madan bunların
+                      hamısından imtina edir! O özünü eşq girdabına atır və
+                      bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı
+                      çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun
+                      ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə
+                      oxucu ona nifrət edir.
+                    </p>
+                    <span class="book-author">Müəllif - Leo Tolstoy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="books__item">
+              <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="book-image">
+                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                  <div class="book-description">
+                    <span class="book-name">
+                      <span>
+                        Anna Karenina
+                      </span>
+                    </span>
+                    <p class="book-des-content">
+                      Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir
+                      evin, bir ailə­nin problemindən başlayır və bütün
+                      Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
+                      <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir
+                      qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi,
+                      sərvəti, adı. Amma o heç nəyə bax­madan bunların
+                      hamısından imtina edir! O özünü eşq girdabına atır və
+                      bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı
+                      çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun
+                      ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə
+                      oxucu ona nifrət edir.
+                    </p>
+                    <span class="book-author">Müəllif - Leo Tolstoy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="books__item">
+              <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="book-image">
+                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                  <div class="book-description">
+                    <span class="book-name">
+                      <span>
+                        Anna Karenina
+                      </span>
+                    </span>
+                    <p class="book-des-content">
+                      Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir
+                      evin, bir ailə­nin problemindən başlayır və bütün
+                      Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
+                      <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir
+                      qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi,
+                      sərvəti, adı. Amma o heç nəyə bax­madan bunların
+                      hamısından imtina edir! O özünü eşq girdabına atır və
+                      bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı
+                      çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun
+                      ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə
+                      oxucu ona nifrət edir.
+                    </p>
+                    <span class="book-author">Müəllif - Leo Tolstoy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="books__item">
+              <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="book-image">
+                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                  <div class="book-description">
+                    <span class="book-name">
+                      <span>
+                        Anna Karenina
+                      </span>
+                    </span>
+                    <p class="book-des-content">
+                      Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir
+                      evin, bir ailə­nin problemindən başlayır və bütün
+                      Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
+                      <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir
+                      qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi,
+                      sərvəti, adı. Amma o heç nəyə bax­madan bunların
+                      hamısından imtina edir! O özünü eşq girdabına atır və
+                      bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı
+                      çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun
+                      ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə
+                      oxucu ona nifrət edir.
+                    </p>
+                    <span class="book-author">Müəllif - Leo Tolstoy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="books__item">
+              <div class="row no-gutters">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="book-image">
+                    <img src="./assets/images/books/tolstoy-book.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                  <div class="book-description">
+                    <span class="book-name">
+                      <span>
+                        Anna Karenina
+                      </span>
+                    </span>
+                    <p class="book-des-content">
+                      Çox mübahisələrə səbəb olmuş məşhur roman. Müəllif bir
+                      evin, bir ailə­nin problemindən başlayır və bütün
+                      Rusiyanın üzləşdiyi çətinliklərə toxu­nur.<br />
+                      <br />Hissləri dolaşıq düşmüş, həyatda azıb qalmış bir
+                      qadın haqqında ro­man. Onun hər şeyi var: əri, oğlu, evi,
+                      sərvəti, adı. Amma o heç nəyə bax­madan bunların
+                      hamısından imtina edir! O özünü eşq girdabına atır və
+                      bununla da öz həyatını çətinləşdirir. Anna Karenina obrazı
+                      çox ziddiyyətlidir. Həyatı alt-üst olduğu üçün oxu­cunun
+                      ona yazığı gəlir, oynaşından ötrü öz oğlunu atdığı üçünsə
+                      oxucu ona nifrət edir.
+                    </p>
+                    <span class="book-author">Müəllif - Leo Tolstoy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- author quote section -->
 
     <section class="author-quote">
-        <div class="container">
-            <div class="row quote__content">
-                <div class="col-xl-8 col-lg-8 col-md-8 col-12 align-middle">
-                    <div class="quote--text-container">
-                        <p class="quote--text">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
-                            you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
-                        </p>
-                        <div class="author-des-and-social-icons">
-                            <div class="author-des">
-                                <span class="author-name">Sevinc Ayaz</span>
-                                <span class="author-job">Rəqəmsal həllərin tətbiqi şöbəsi - Şöbə müdiri</span
+      <div class="container">
+        <div class="row quote__content">
+          <div class="col-xl-8 col-lg-8 col-md-8 col-12 align-middle">
+            <div class="quote--text-container">
+              <p class="quote--text">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable. If you are going to use a passage of Lorem
+                Ipsum, you need to be sure there isn't anything embarrassing
+                hidden in the middle of text. All the Lorem Ipsum generators
+              </p>
+              <div class="author-des-and-social-icons">
+                <div class="author-des">
+                  <span class="author-name">Sevinc Ayaz</span>
+                  <span class="author-job"
+                    >Rəqəmsal həllərin tətbiqi şöbəsi - Şöbə müdiri</span
                   >
                 </div>
                 <div class="social-icons">
                   <a href="">
                     <i class="fa fa-facebook"></i>
                   </a>
-                  <a href="">
-                    <i class="fa fa-instagram"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
+                            <a href="">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-4 col-12">
-            <div class="author-image">
-              <img
-                src="./assets/images/client-photos/author-quote-sctn-image.png"
-                alt=""
-              />
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                <div class="author-image">
+                    <img src="./assets/images/client-photos/author-quote-sctn-image.png" alt="" />
+                </div>
             </div>
-          </div>
         </div>
         <div class="row quote__content-mobile">
-          <div class="col-12">
-            <div class="quote--text-container-mobile">
-              <div class="author-des-and-social-icons">
-                <div class="author-des">
-                  <span class="author-name">Sevinc Ayaz</span>
-                                <span class="author-job">Rəqəmsal həllərin tətbiqi şöbəsi - Şöbə müdiri</span
+            <div class="col-12">
+                <div class="quote--text-container-mobile">
+                    <div class="author-des-and-social-icons">
+                        <div class="author-des">
+                            <span class="author-name">Sevinc Ayaz</span>
+                            <span class="author-job">Rəqəmsal həllərin tətbiqi şöbəsi - Şöbə müdiri</span
                   >
                 </div>
                 <div class="social-icons">
@@ -478,166 +537,166 @@
                   Özünü təkmilləşdirməyin 2-ci qaydası
                 </h6>
                 <span class="publish-date">25.02.2020</span>
-                                <p class="card--des">
-                                    Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ... Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ...
-                                </p>
-                                <div class="go-to">
-                                    <a href="" class="go-to-btn">
-                                        <img alt="" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card--item">
-                            <div class="card--header">
-                                <div class="card--image">
-                                    <img src="./assets/images/blog-news-images-home/image2.png" alt="" />
-                                </div>
-                                <div class="card--type">
-                                    Xəbər
-                                </div>
-                            </div>
-                            <div class="card--body">
-                                <h6 class="card--title">
-                                    Özünü təkmilləşdirməyin 2-ci qaydası
-                                </h6>
-                                <span class="publish-date">25.02.2020</span>
-                                <p class="card--des">
-                                    Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ...
-                                </p>
-                                <div class="go-to">
-                                    <a href="" class="go-to-btn">
-                                        <img alt="" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card--item">
-                            <div class="card--header">
-                                <div class="card--image">
-                                    <img src="./assets/images/blog-news-images-home/image3.png" alt="" />
-                                </div>
-                                <div class="card--type">
-                                    Bloq
-                                </div>
-                            </div>
-                            <div class="card--body">
-                                <h6 class="card--title">
-                                    Özünü təkmilləşdirməyin 2-ci qaydası
-                                </h6>
-                                <span class="publish-date">25.02.2020</span>
-                                <p class="card--des">
-                                    Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ...
-                                </p>
-                                <div class="go-to">
-                                    <a href="" class="go-to-btn">
-                                        <img alt="" />
-                                    </a>
-                                </div>
+                            <p class="card--des">
+                                Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ... Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ...
+                            </p>
+                            <div class="go-to">
+                                <a href="./blog-details.html" class="go-to-btn">
+                                    <img alt="" />
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="more-btn-box">
-                    <a href="./blogs.html" target="_blank" class="button more-btn">
-            Daha Çox
-          </a>
-                </div>
-
-                <div class="videos-slider">
-                    <div class="videos-slider__title">
-                        <span>
-              <img src="./assets/images/icons/red-circle.png" alt="" />
-              Videolar
-            </span>
-                        <p class="videos-slider__title--text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card--item">
+                        <div class="card--header">
+                            <div class="card--image">
+                                <img src="./assets/images/blog-news-images-home/image2.png" alt="" />
+                            </div>
+                            <div class="card--type">
+                                Xəbər
+                            </div>
+                        </div>
+                        <div class="card--body">
+                            <h6 class="card--title">
+                                Özünü təkmilləşdirməyin 2-ci qaydası
+                            </h6>
+                            <span class="publish-date">25.02.2020</span>
+                            <p class="card--des">
+                                Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ...
+                            </p>
+                            <div class="go-to">
+                                <a href="./blog-details.html" class="go-to-btn">
+                                    <img alt="" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="owl-carousel owl-carousel-videos owl-theme custom-arrows videos-slider__content">
-                        <div class="video__item">
-                            <div class="video--card">
-                                <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
-                                    <div>
-                                        <div class="play-icon">
-                                            <span>
-                        <i class="fa fa-play"></i>
-                      </span>
-                                        </div>
-                                        <img src="./assets/images/video-images/video-image-1.png" alt="" />
-                                    </div>
-                                </a>
-                                <div class="video--card-body">
-                                    <h3 class="video--card-title">
-                                        2019-da qeyd etdiyim ən yaxşı qeydlər
-                                    </h3>
-                                </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card--item">
+                        <div class="card--header">
+                            <div class="card--image">
+                                <img src="./assets/images/blog-news-images-home/image3.png" alt="" />
+                            </div>
+                            <div class="card--type">
+                                Bloq
                             </div>
                         </div>
-                        <div class="video__item">
-                            <div class="video--card">
-                                <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
-                                    <div>
-                                        <div class="play-icon">
-                                            <span>
-                        <i class="fa fa-play"></i>
-                      </span>
-                                        </div>
-                                        <img src="./assets/images/video-images/video-image-2.png" alt="" />
-                                    </div>
+                        <div class="card--body">
+                            <h6 class="card--title">
+                                Özünü təkmilləşdirməyin 2-ci qaydası
+                            </h6>
+                            <span class="publish-date">25.02.2020</span>
+                            <p class="card--des">
+                                Şirkətin və yeni qurulan bizneslərin qısa zamanda öz hədəflərinə çata bilməsi üçün həyati dərəcədə önəm daşıyan marketinq ...
+                            </p>
+                            <div class="go-to">
+                                <a href="./blog-details.html" class="go-to-btn">
+                                    <img alt="" />
                                 </a>
-                                <div class="video--card-body">
-                                    <h3 class="video--card-title">
-                                        2019-da qeyd etdiyim ən yaxşı qeydlər
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="video__item">
-                            <div class="video--card">
-                                <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
-                                    <div>
-                                        <div class="play-icon">
-                                            <span>
-                        <i class="fa fa-play"></i>
-                      </span>
-                                        </div>
-                                        <img src="./assets/images/video-images/video-image-3.png" alt="" />
-                                    </div>
-                                </a>
-                                <div class="video--card-body">
-                                    <h3 class="video--card-title">
-                                        2019-da qeyd etdiyim ən yaxşı qeydlər
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="video__item">
-                            <div class="video--card">
-                                <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
-                                    <div>
-                                        <div class="play-icon">
-                                            <span>
-                        <i class="fa fa-play"></i>
-                      </span>
-                                        </div>
-                                        <img src="./assets/images/video-images/video-image-3.png" alt="" />
-                                    </div>
-                                </a>
-                                <div class="video--card-body">
-                                    <h3 class="video--card-title">
-                                        2019-da qeyd etdiyim ən yaxşı qeydlər
-                                    </h3>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="more-btn-box">
+                <a href="./blogs.html" target="_blank" class="button more-btn">
+            Daha Çox
+          </a>
+            </div>
+
+            <div class="videos-slider">
+                <div class="videos-slider__title">
+                    <span>
+              <img src="./assets/images/icons/red-circle.png" alt="" />
+              Videolar
+            </span>
+                    <p class="videos-slider__title--text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+                <div class="owl-carousel owl-carousel-videos owl-theme custom-arrows videos-slider__content">
+                    <div class="video__item">
+                        <div class="video--card">
+                            <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
+                                <div>
+                                    <div class="play-icon">
+                                        <span>
+                        <i class="fa fa-play"></i>
+                      </span>
+                                    </div>
+                                    <img src="./assets/images/video-images/video-image-1.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="video--card-body">
+                                <h3 class="video--card-title">
+                                    2019-da qeyd etdiyim ən yaxşı qeydlər
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video__item">
+                        <div class="video--card">
+                            <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
+                                <div>
+                                    <div class="play-icon">
+                                        <span>
+                        <i class="fa fa-play"></i>
+                      </span>
+                                    </div>
+                                    <img src="./assets/images/video-images/video-image-2.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="video--card-body">
+                                <h3 class="video--card-title">
+                                    2019-da qeyd etdiyim ən yaxşı qeydlər
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video__item">
+                        <div class="video--card">
+                            <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
+                                <div>
+                                    <div class="play-icon">
+                                        <span>
+                        <i class="fa fa-play"></i>
+                      </span>
+                                    </div>
+                                    <img src="./assets/images/video-images/video-image-3.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="video--card-body">
+                                <h3 class="video--card-title">
+                                    2019-da qeyd etdiyim ən yaxşı qeydlər
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video__item">
+                        <div class="video--card">
+                            <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Lqq5Vy2LooI" class="fancy-box">
+                                <div>
+                                    <div class="play-icon">
+                                        <span>
+                        <i class="fa fa-play"></i>
+                      </span>
+                                    </div>
+                                    <img src="./assets/images/video-images/video-image-3.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="video--card-body">
+                                <h3 class="video--card-title">
+                                    2019-da qeyd etdiyim ən yaxşı qeydlər
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->
@@ -663,9 +722,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="./assets/plugins/fancy-box/jquery.fancybox.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/plugins/aos/aos.js"></script>
     <script src="./assets/js/owl.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <script>
+        AOS.init()
+    </script>
 </body>
 
 </html>

@@ -119,7 +119,8 @@ button:focus {
 }
 
 .recommended-books .books-slider .owl-theme .owl-nav .owl-prev,
-.videos-slider .owl-theme .owl-nav .owl-prev {
+.videos-slider .owl-theme .owl-nav .owl-prev,
+.blog-details .similar-blogs .owl-theme .owl-nav .owl-prev {
     @include flexContainer(inline-flex,
     center,
     column);
@@ -143,7 +144,8 @@ button:focus {
 }
 
 .recommended-books .books-slider .owl-theme .owl-nav .owl-next,
-.videos-slider .owl-theme .owl-nav .owl-next {
+.videos-slider .owl-theme .owl-nav .owl-next,
+.blog-details .similar-blogs .owl-theme .owl-nav .owl-next {
     @include flexContainer(inline-flex,
     center,
     column);

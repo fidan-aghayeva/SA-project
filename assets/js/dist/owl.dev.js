@@ -21,6 +21,7 @@ function callCarousel(className) {
 callCarousel('.owl-carousel-books');
 callCarousel('.owl-carousel-videos');
 callCarousel('.owl-carousel-blog-details');
+callCarousel('.owl-carousel-similar-blogs');
 $('.owl-carousel-books').owlCarousel({
   loop: true,
   margin: 0,
@@ -83,6 +84,22 @@ $('.owl-carousel-interview-details').owlCarousel({
     },
     1000: {
       items: 1
+    }
+  }
+});
+$('.owl-carousel-similar-blogs').owlCarousel({
+  loop: true,
+  margin: 24,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
     }
   }
 });
